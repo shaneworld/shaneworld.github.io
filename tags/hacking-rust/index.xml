@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hacking Rust on Shane&#39;s Blog</title>
+    <title>Hacking-Rust on Shane&#39;s Blog</title>
     <link>https://shaneworld.github.io/tags/hacking-rust/</link>
-    <description>Recent content in Hacking Rust on Shane&#39;s Blog</description>
+    <description>Recent content in Hacking-Rust on Shane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2023 Shane. All Rights Reserved.</copyright>

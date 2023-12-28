@@ -7,7 +7,7 @@
 <meta itemprop="description" content="本章为 Rust 官方文档入门指南章节的简明笔记"><meta itemprop="datePublished" content="2023-12-27T15:18:30+08:00" />
 <meta itemprop="dateModified" content="2023-12-27T15:18:30+08:00" />
 <meta itemprop="wordCount" content="144">
-<meta itemprop="keywords" content="Hacking Rust," /><meta property="og:title" content="Hacking Rust：入门指南" />
+<meta itemprop="keywords" content="Hacking-Rust," /><meta property="og:title" content="Hacking Rust：入门指南" />
 <meta property="og:description" content="本章为 Rust 官方文档入门指南章节的简明笔记" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://shaneworld.github.io/2023/12/hacking-rust%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/" /><meta property="article:section" content="posts" />
@@ -31,7 +31,7 @@
 
 
 	
-	<div class="container wrapper">
+	<div class="container-wide wrapper">
 		<div class="header">
 	
 	<h1 class="site-title"><a href="https://shaneworld.github.io/">Shane&#39;s Blog</a></h1>
@@ -64,8 +64,10 @@
 </div>
 
 
-		<div class="post">
-    <div class="post-header">
+		
+<div class="article-nav" id="article-nav-id">
+    <div class="post">
+        <div class="post-header">
     
     <div class="meta">
         <div class="date">
@@ -80,9 +82,26 @@
 </div>
 
 
-    
-    
-    <h2 id="hello-world">Hello world!</h2>
+        
+        
+        <aside class="show-on-mobile toc" id="static-toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#hello-world">Hello world!</a>
+      <ol>
+        <li><a href="#编译和运行">编译和运行</a></li>
+      </ol>
+    </li>
+    <li><a href="#cargo-构建系统和包管理器">Cargo： 构建系统和包管理器</a></li>
+  </ol>
+</nav>
+        </aside>
+        
+
+        <h2 id="hello-world">Hello world!</h2>
 <p>用 Rust 打印 <code>hello world!</code>：</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
 <table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -184,6 +203,22 @@
 </li>
 </ul>
 
+
+    </div>
+    <nav class="hide-on-mobile section-nav">
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#hello-world">Hello world!</a>
+      <ol>
+        <li><a href="#编译和运行">编译和运行</a></li>
+      </ol>
+    </li>
+    <li><a href="#cargo-构建系统和包管理器">Cargo： 构建系统和包管理器</a></li>
+  </ol>
+</nav>
+    </nav>
+</div>
+<div class="post">
     <hr class="footer-separator" />
 <div class="tags">
     
@@ -191,7 +226,7 @@
     <ul class="flat">
         
         
-        <li class="tag-li"><a href="/tags/hacking-rust">Hacking Rust</a>
+        <li class="tag-li"><a href="/tags/hacking-rust">Hacking-Rust</a>
         </li>
         
     </ul>
@@ -221,6 +256,121 @@
 		
 	</nav>
 </div><script>feather.replace()</script>
+	
+	<script>
+    var enableTruncate =  true 
+    var filterDepth = false;
+    const MAX_DEPTH = 9; 
+
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.reverse().forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
+                    if (selected != null) {
+                        selected.forEach(s => {
+                            if (s != null) {
+                                var depth = getDepth(s.parentElement);
+                                if (filterDepth && depth <= MAX_DEPTH) {
+                                    clearActiveStatesInTableOfContents();
+                                    s.parentElement.classList.add('active')
+                                }
+                            } else if (!filterDepth) {
+                                clearActiveStatesInTableOfContents();
+                                s.parentElement.classList.add('active');
+                            }
+                        }
+                        )
+                    }
+
+                }
+            });
+        });
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+    
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) return false; 
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('nav li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+
+    function getDepth(parentElement) {
+        var depth = 0;
+        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
+            depth++;
+            parentElement = parentElement.parentElement;
+        }
+        return depth;
+    }
+
+    function navItems() {
+        
+        var nestedListItems = document.querySelectorAll('nav nav li a');
+        return Array.from(nestedListItems).filter(listItem =>
+            listItem.href != null && listItem.hash.startsWith("#")
+        )
+    }
+
+    function lasItemInNavBarVisible() {
+        var lastItem = navItems().slice(-1)[0]
+        return isVisible(lastItem)
+    }
+
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!enableTruncate) return;
+        var navBar = navItems()
+        console.log(navBar)
+        if (!lasItemInNavBarVisible()) {
+            filterDepth = true;
+            
+            navBar.forEach(function (listItem) {
+                var depth = getDepth(listItem.parentElement);
+
+                if (depth > MAX_DEPTH) {
+                    listItem.parentElement.classList.add('depth-nested');
+                }
+            });
+        }
+
+    });
+
+</script>
+
 	
 </body>
 

@@ -10,66 +10,10 @@
     <lastBuildDate>Wed, 27 Dec 2023 15:18:30 +0800</lastBuildDate>
     <atom:link href="https://shaneworld.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hacking Rust</title>
+      <title>Hacking-Rust</title>
       <link>https://shaneworld.github.io/tags/hacking-rust/</link>
       <pubDate>Wed, 27 Dec 2023 15:18:30 +0800</pubDate>
       <guid>https://shaneworld.github.io/tags/hacking-rust/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>css</title>
-      <link>https://shaneworld.github.io/tags/css/</link>
-      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://shaneworld.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>html</title>
-      <link>https://shaneworld.github.io/tags/html/</link>
-      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://shaneworld.github.io/tags/html/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>markdown</title>
-      <link>https://shaneworld.github.io/tags/markdown/</link>
-      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://shaneworld.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>themes</title>
-      <link>https://shaneworld.github.io/tags/themes/</link>
-      <pubDate>Tue, 20 Jun 2023 00:00:00 +0000</pubDate>
-      <guid>https://shaneworld.github.io/tags/themes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Procrastinating</title>
-      <link>https://shaneworld.github.io/tags/procrastinating/</link>
-      <pubDate>Sun, 18 Mar 2018 12:13:32 +0530</pubDate>
-      <guid>https://shaneworld.github.io/tags/procrastinating/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Space</title>
-      <link>https://shaneworld.github.io/tags/space/</link>
-      <pubDate>Sun, 18 Mar 2018 12:13:30 +0530</pubDate>
-      <guid>https://shaneworld.github.io/tags/space/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Primer</title>
-      <link>https://shaneworld.github.io/tags/primer/</link>
-      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
-      <guid>https://shaneworld.github.io/tags/primer/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>todo</title>
-      <link>https://shaneworld.github.io/tags/todo/</link>
-      <pubDate>Sun, 18 Mar 2018 02:01:58 +0530</pubDate>
-      <guid>https://shaneworld.github.io/tags/todo/</guid>
       <description></description>
     </item>
   </channel>

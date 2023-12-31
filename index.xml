@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2023 Shane. All Rights Reserved.</copyright>
-    <lastBuildDate>Wed, 27 Dec 2023 15:18:30 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 30 Dec 2023 18:35:05 +0800</lastBuildDate>
     <atom:link href="https://shaneworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>从零开发一个 Neovim 插件</title>
+      <link>https://shaneworld.github.io/2023/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA-neovim-%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Sat, 30 Dec 2023 18:35:05 +0800</pubDate>
+      <guid>https://shaneworld.github.io/2023/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA-neovim-%E6%8F%92%E4%BB%B6/</guid>
+      <description>前言 最近发现在 neovim 中没有一个很好的插件可以实现中英文之间自动添加空格等针对中文排版的插件，因此我想要自己用 lua 开发一个插件，可以对中英混合的文章进行格式化排版。现有的插件是一个叫做 pangu.vim 的插件，并不是 lua 编写的。这篇文章主要讲解 neovim 插件的开发基础知识，了解 neovim 加载插件的机制，参考了 neovim 的 lua 插件编写入门这篇博客。&#xA;Vim 插件加载机制 runtimepath 插件其实就是一个当 Vim 启动的时候能被自动执行的脚本。&#xA;vim 启动时，会自动加载 runtimepath 下的脚本。&#xA;vim 和 neovim 的 runtimepath 路径并不相同，可以通过如下命令查看：&#xA;1 2 :echo &amp;amp;runtimepath :set runtimepath 脚本加载 可以通过如下命令查看当前 vim/neovim 加载了哪些脚本&#xA;1 :scriptnames vim 把插件分割成了多个文件。vim 加载的脚本除了 .vimrc 或者 init.vim 以及配置文件中 source 与 runtime 的脚本外，还会从 runtimepath 所有目录中自动搜索并加载特定子文件夹下的脚本。&#xA;需要执行的所有子文件夹可以通过 help runtimepath 命令查看，以下是对几个常用的进行说明：&#xA;colors/&#xA;会查找该文件夹下的所有 vim 文件并执行，每个 vim 文件中应该包括生成的一个配色方案的所有命令。&#xA;plugin/</description>
+    </item>
     <item>
       <title>Split —— Jay Chou</title>
       <link>https://shaneworld.github.io/about/</link>

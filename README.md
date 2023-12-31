@@ -1,1 +1,1 @@
-# Welcome to my blog!
+# Welcome to Shane's Blog!

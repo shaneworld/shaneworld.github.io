@@ -1,27 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on Shane&#39;s Blog</title>
-    <link>https://shaneworld.github.io/posts/</link>
-    <description>Recent content in Posts on Shane&#39;s Blog</description>
+    <title>neovim on Shane&#39;s Blog</title>
+    <link>https://shaneworld.github.io/tags/neovim/</link>
+    <description>Recent content in neovim on Shane&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2023 Shane. All Rights Reserved.</copyright>
     <lastBuildDate>Sat, 30 Dec 2023 18:35:05 +0800</lastBuildDate>
-    <atom:link href="https://shaneworld.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://shaneworld.github.io/tags/neovim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>从零开发一个 Neovim 插件</title>
       <link>https://shaneworld.github.io/2023/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA-neovim-%E6%8F%92%E4%BB%B6/</link>
       <pubDate>Sat, 30 Dec 2023 18:35:05 +0800</pubDate>
       <guid>https://shaneworld.github.io/2023/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA-neovim-%E6%8F%92%E4%BB%B6/</guid>
       <description>前言 最近发现在 neovim 中没有一个很好的插件可以实现中英文之间自动添加空格等针对中文排版的插件，因此我想要自己用 lua 开发一个插件，可以对中英混合的文章进行格式化排版。现有的插件是一个叫做 pangu.vim 的插件，并不是 lua 编写的。这篇文章主要讲解 neovim 插件的开发基础知识，了解 neovim 加载插件的机制，参考了 neovim 的 lua 插件编写入门这篇博客。&#xA;Vim 插件加载机制 runtimepath 插件其实就是一个当 Vim 启动的时候能被自动执行的脚本。&#xA;vim 启动时，会自动加载 runtimepath 下的脚本。&#xA;vim 和 neovim 的 runtimepath 路径并不相同，可以通过如下命令查看：&#xA;1 2 :echo &amp;amp;runtimepath :set runtimepath 脚本加载 可以通过如下命令查看当前 vim/neovim 加载了哪些脚本&#xA;1 :scriptnames vim 把插件分割成了多个文件。vim 加载的脚本除了 .vimrc 或者 init.vim 以及配置文件中 source 与 runtime 的脚本外，还会从 runtimepath 所有目录中自动搜索并加载特定子文件夹下的脚本。&#xA;需要执行的所有子文件夹可以通过 help runtimepath 命令查看，以下是对几个常用的进行说明：&#xA;colors/&#xA;会查找该文件夹下的所有 vim 文件并执行，每个 vim 文件中应该包括生成的一个配色方案的所有命令。&#xA;plugin/</description>
-    </item>
-    <item>
-      <title>Hacking Rust：入门指南</title>
-      <link>https://shaneworld.github.io/2023/12/hacking-rust%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Wed, 27 Dec 2023 15:18:30 +0800</pubDate>
-      <guid>https://shaneworld.github.io/2023/12/hacking-rust%E5%85%A5%E9%97%A8%E6%8C%87%E5%8D%97/</guid>
-      <description>Hello world! 用 Rust 打印 hello world!：&#xA;1 2 3 fn main() { println!(&amp;#34;hello world!&amp;#34;); } 关于上述代码的几点解释：&#xA;main 函数是 Rust 程序的入口。&#xA;println! 是 Rust 语言的宏。如果是函数的话应该去掉 !，这也是函数和宏的区别。&#xA;大部分 Rust 代码都以分号结尾。&#xA;编译和运行 Rust 是预编译静态类型语言，也就是说，编译和运行是独立的。我们可以编译后将可执行程序发送给别人直接运行而无需安装环境。&#xA;1 2 3 4 5 # 编译 rustc main.rs # 运行 ./main Cargo： 构建系统和包管理器 Cargo 用来构建代码、下载依赖并编译这些库。&#xA;cargo new hello_cargo 创建一个项目。目录结构如下：&#xA;. ├── .git │ ├── config │ ├── description │ ├── HEAD │ ├── hooks │ ├── info │ ├── objects │ └── refs ├── .</description>
     </item>
   </channel>
 </rss>

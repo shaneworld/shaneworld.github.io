@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>从零开发一个 Neovim 插件 - Shane&#39;s Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta itemprop="name" content="从零开发一个 Neovim 插件">
+<meta itemprop="description" content="最近想要写一些 neovim 的插件来满足自己的需求，因此记录一下我学习开发 neovim 插件的过程"><meta itemprop="datePublished" content="2023-12-30T18:35:05+08:00" />
+<meta itemprop="dateModified" content="2023-12-30T18:35:05+08:00" />
+<meta itemprop="wordCount" content="298">
+<meta itemprop="keywords" content="neovim," /><meta property="og:title" content="从零开发一个 Neovim 插件" />
+<meta property="og:description" content="最近想要写一些 neovim 的插件来满足自己的需求，因此记录一下我学习开发 neovim 插件的过程" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://shaneworld.github.io/2023/12/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%8F%91%E4%B8%80%E4%B8%AA-neovim-%E6%8F%92%E4%BB%B6/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-30T18:35:05+08:00" />
+<meta property="article:modified_time" content="2023-12-30T18:35:05+08:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="从零开发一个 Neovim 插件"/>
+<meta name="twitter:description" content="最近想要写一些 neovim 的插件来满足自己的需求，因此记录一下我学习开发 neovim 插件的过程"/>
+<link rel="stylesheet" type="text/css" media="screen" href="https://shaneworld.github.io/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://shaneworld.github.io/css/main.css" />
+
+        <link id="dark-scheme" rel="stylesheet" type="text/css" href="https://shaneworld.github.io/css/dark.css" />
+
+	<script src="https://shaneworld.github.io/js/feather.min.js"></script>
+	
+		<script src="https://shaneworld.github.io/js/main.js"></script>
+</head>
+
+
+<body>
+
+
+	
+	<div class="container-wide wrapper">
+		<div class="header">
+	
+	<h1 class="site-title"><a href="https://shaneworld.github.io/">Shane&#39;s Blog</a></h1>
+	<div class="site-description"><p>A man can succeed at almost anything for which he was unlimited enthusiasm.</p><nav class="nav social">
+			<ul class="flat"><li><a href="https://github.com/shaneworld/" title="Github"><i data-feather="github"></i></a></li><li><a href="mailto:s516097815@gmail.com" title="email"><i data-feather="mail"></i></a></li><span class="scheme-toggle"><a href="#" id="scheme-toggle"></a></ul>
+		</nav>
+	</div>
+
+	<nav class="nav">
+		<ul class="flat">
+			
+			<li>
+				<a href="/">主页</a>
+			</li>
+			
+			<li>
+				<a href="/posts">所有文章</a>
+			</li>
+			
+			<li>
+				<a href="/about">关于</a>
+			</li>
+			
+			<li>
+				<a href="/tags">标签</a>
+			</li>
+			
+		</ul>
+	</nav>
+</div>
+
+
+		
+<div class="article-nav" id="article-nav-id">
+    <div class="post">
+        <div class="post-header">
+    
+    <div class="meta">
+        <div class="date">
+            <span class="day">30</span>
+            <span class="rest">Dec 2023</span>
+        </div>
+    </div>
+    
+    <div class="matter">
+        <h1 class="title">从零开发一个 Neovim 插件</h1>
+    </div>
+</div>
+
+
+        
+        
+        <aside class="show-on-mobile toc" id="static-toc">
+            <header>
+                <h3>Contents</h3>
+            </header>
+            <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#vim-插件加载机制">Vim 插件加载机制</a>
+      <ol>
+        <li><a href="#runtimepath">runtimepath</a></li>
+        <li><a href="#脚本加载">脚本加载</a></li>
+        <li><a href="#vim-插件的加载和安装方式">vim 插件的加载和安装方式</a></li>
+        <li><a href="#使用插件管理器">使用插件管理器</a></li>
+        <li><a href="#vim-内置软件包管理方法">vim 内置软件包管理方法</a></li>
+      </ol>
+    </li>
+    <li><a href="#neovim-中的-lua-脚本">neovim 中的 lua 脚本</a>
+      <ol>
+        <li><a href="#initlua">init.lua</a></li>
+        <li><a href="#lua-模块">lua 模块</a></li>
+        <li><a href="#模块下的-initlua">模块下的 init.lua</a></li>
+      </ol>
+    </li>
+    <li><a href="#vim-常用-lua-接口说明">vim 常用 lua 接口说明</a></li>
+  </ol>
+</nav>
+        </aside>
+        
+
+        <h2 id="前言">前言</h2>
+<p>最近发现在 neovim 中没有一个很好的插件可以实现中英文之间自动添加空格等针对中文排版的插件，因此我想要自己用 lua 开发一个插件，可以对中英混合的文章进行格式化排版。现有的插件是一个叫做 <a href="https://github.com/hotoo/pangu.vim"><code>pangu.vim</code></a> 的插件，并不是 lua 编写的。这篇文章主要讲解 neovim 插件的开发基础知识，了解 neovim 加载插件的机制，参考了 <a href="https://whitestarrain.github.io/blog/posts/nvim-lua-plugin-md_section_number/">neovim 的 lua 插件编写入门</a>这篇博客。</p>
+<h2 id="vim-插件加载机制">Vim 插件加载机制</h2>
+<h3 id="runtimepath">runtimepath</h3>
+<blockquote>
+<p>插件其实就是一个当 Vim 启动的时候能被自动执行的脚本。</p>
+</blockquote>
+<p>vim 启动时，会自动加载 <code>runtimepath</code> 下的脚本。</p>
+<p>vim 和 neovim 的 <code>runtimepath</code> 路径并不相同，可以通过如下命令查看：</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span>:echo &amp;runtimepath
+</span></span><span style="display:flex;"><span>:<span style="color:#000;font-weight:bold">set</span> runtimepath
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="脚本加载">脚本加载</h3>
+<p>可以通过如下命令查看当前 vim/neovim 加载了哪些脚本</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-vim" data-lang="vim"><span style="display:flex;"><span>:scriptnames
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>vim 把插件分割成了多个文件。vim 加载的脚本除了 <code>.vimrc</code> 或者 <code>init.vim</code> 以及配置文件中 <code>source</code> 与 <code>runtime</code> 的脚本外，还会从 <code>runtimepath</code> 所有目录中自动搜索并加载特定子文件夹下的脚本。</p>
+<p>需要执行的所有子文件夹可以通过 <code>help runtimepath</code> 命令查看，以下是对几个常用的进行说明：</p>
+<ul>
+<li>
+<p><code>colors/</code></p>
+<p>会查找该文件夹下的所有 vim 文件并执行，每个 vim 文件中应该包括生成的一个配色方案的所有命令。</p>
+</li>
+<li>
+<p><code>plugin/</code></p>
+<p>在每次 vim 启动时执行，存放全局插件（<code>:help plugin</code>）脚本，<em>不受编辑的文件类型影响</em>。</p>
+</li>
+<li>
+<p><code>ftplugin/</code></p>
+<p>仅用于<strong>特定类型的文件</strong>，且仅对当前缓冲区有效。根据文件类型把脚本分布到不同的文件夹下。</p>
+</li>
+<li>
+<p><code>indent/</code></p>
+<p>具有 <code>ftplugin/</code> 的所有特点，但是该文件夹下的文件用来<strong>设置文件类型相关的缩进</strong>。</p>
+</li>
+<li>
+<p><code>compiler/</code></p>
+<p>只加载类型对应的脚本文件，定义<strong>如何运行各种编译器或格式化工具，以及如何解析输出</strong>。可以在多个 <code>ftplugin</code> 之间共享，不会被自动执行，必须通过 <code>:compiler</code> 调用。</p>
+</li>
+<li>
+<p><code>after/</code></p>
+<p>会在 <code>plugin</code> 加载之后加载，往往用来覆盖一些默认值。（较少用到）</p>
+</li>
+<li>
+<p><code>autoload/</code></p>
+<p>延迟加载的一种方式，仅仅<strong>在调用指定方法时会自动加载</strong>。</p>
+</li>
+<li>
+<p><code>pack/</code></p>
+<p>放置需要加载的软件包。</p>
+</li>
+<li>
+<p><code>doc/</code></p>
+<p>存放文档。</p>
+</li>
+</ul>
+<h3 id="vim-插件的加载和安装方式">vim 插件的加载和安装方式</h3>
+<h4 id="直接添加脚本文件">直接添加脚本文件</h4>
+<p>把脚本放到 <code>runtimepath</code> 中指定文件夹的目录中去。</p>
+<h4 id="修改-runtimepath">修改 runtimepath</h4>
+<p>在配置文件中，将插件目录添加到 <code>runtimepath</code> 中。对于 neovim 来说，如果使用 lua 配置的话可以在 <code>init.lua</code> 文件中添加如下代码:</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>vim.opt.rtp:prepend(<span style="color:#d14">&#34;&lt;path_to_plugin&gt;&#34;</span>)
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="使用插件管理器">使用插件管理器</h3>
+<p>插件管理器本质上也是修改 <code>runtimepath</code>，只不过往往在此基础上提供了自动 clone、更新等功能。</p>
+<h3 id="vim-内置软件包管理方法">vim 内置软件包管理方法</h3>
+<p>将插件放置到 <code>&lt;runtimepath&gt;/pack/</code> 的子路径下，使用较少。</p>
+<h2 id="neovim-中的-lua-脚本">neovim 中的 lua 脚本</h2>
+<p>neovim 可以用 vimscript 或者 lua 来配置，相比于 vimscript 来说，lua 配置更加简单、易读、强大。</p>
+<h3 id="initlua">init.lua</h3>
+<p>可以自动加载的 lua 脚本有两种，一种是 <code>init.lua</code>，用来替代 <code>init.vim</code>，且无法与 <code>init.vim</code> 共存。</p>
+<h3 id="lua-模块">lua 模块</h3>
+<p>在 lua 脚本中，使用 <code>require('module)</code> 会从 <code>runtimepath/lua/</code> 下寻找 lua 脚本（help lua-require）。可以看作 lua 版本的 <code>autoload</code>。</p>
+<p><code>plugin</code>、<code>indent</code> 等特殊目录下的 lua 脚本也会被自动加载，只不过 <strong>vim 脚本会先于 lua 脚本加载</strong>。</p>
+<h3 id="模块下的-initlua">模块下的 init.lua</h3>
+<p>在文件夹下如果包括 init.lua 的话，可以直接引用该文件夹而不必指定文件的名称，这是 neovim 中加载 lua 的特性，一般的 lua 解释器并没有这种模块加载的方式。</p>
+<h2 id="vim-常用-lua-接口说明">vim 常用 lua 接口说明</h2>
+<p>neovim 暴露了一个全局变量 <code>vim</code> 来作为 lua 调用 vim api 的入口。按照 <code>help lua.txt</code> 进行划分，一些常用的函数和子模块如下：</p>
+<ul>
+<li><code>:h lua-stdlib</code>: 一些 lua 的标准库，包含一些函数和子模块。</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">7
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 在 lua 中使用正则表达式</span>
+</span></span><span style="display:flex;"><span>vim.regex
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- neovim 的 event-loop 模块（使用 LibUV）</span>
+</span></span><span style="display:flex;"><span>vim.loop
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 暴露 vim 的 API（:h API）的模块。包括获取和修改 buffer 内容，添加、删除高亮等</span>
+</span></span><span style="display:flex;"><span>vim.api
+</span></span><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 暴露 vim 的一些内建函数（:h eval.txt）</span>
+</span></span><span style="display:flex;"><span>vim.fn
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h lua-vim</code>：主要提供一些通用的 lua 方法，比如 <code>startwith</code>，<code>deepcopy</code>，<code>list_slice</code>等</li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 把 Lua 对象以更易读的方式打印（在打印 Lua table 时会很有用）</span>
+</span></span><span style="display:flex;"><span>vim.inspect
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h lua-ui</code></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 可被插件覆写的 UI 相关函数</span>
+</span></span><span style="display:flex;"><span>vim.ui
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h lsp-util</code></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 控制内置 LSP 客户端的模块</span>
+</span></span><span style="display:flex;"><span>vim.lsp
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h treesitter.txt</code></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 暴露 treesitter 库中的一些实用函数的模块</span>
+</span></span><span style="display:flex;"><span>vim.treesitter
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h lua-uri</code></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span><span style="color:#998;font-style:italic">-- 提供一些 uri 的转换操作，比如 buf 编号，文件路径</span>
+</span></span><span style="display:flex;"><span>vim.uri_xxxxxxxx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>:h lua-filetype</code></li>
+</ul>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
+<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lua" data-lang="lua"><span style="display:flex;"><span>vim.filetype.match()
+</span></span><span style="display:flex;"><span>vim.filetype.add()
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>更多相关的接口函数参见 neovim 的官方 doc。</p>
+
+
+    </div>
+    <nav class="hide-on-mobile section-nav">
+        <nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#vim-插件加载机制">Vim 插件加载机制</a>
+      <ol>
+        <li><a href="#runtimepath">runtimepath</a></li>
+        <li><a href="#脚本加载">脚本加载</a></li>
+        <li><a href="#vim-插件的加载和安装方式">vim 插件的加载和安装方式</a></li>
+        <li><a href="#使用插件管理器">使用插件管理器</a></li>
+        <li><a href="#vim-内置软件包管理方法">vim 内置软件包管理方法</a></li>
+      </ol>
+    </li>
+    <li><a href="#neovim-中的-lua-脚本">neovim 中的 lua 脚本</a>
+      <ol>
+        <li><a href="#initlua">init.lua</a></li>
+        <li><a href="#lua-模块">lua 模块</a></li>
+        <li><a href="#模块下的-initlua">模块下的 init.lua</a></li>
+      </ol>
+    </li>
+    <li><a href="#vim-常用-lua-接口说明">vim 常用 lua 接口说明</a></li>
+  </ol>
+</nav>
+    </nav>
+</div>
+<div class="post">
+    <hr class="footer-separator" />
+<div class="tags">
+    
+    
+    <ul class="flat">
+        
+        
+        <li class="tag-li"><a href="/tags/neovim">neovim</a>
+        </li>
+        
+    </ul>
+    
+    
+</div>
+
+
+
+<div class="back">
+    <a href="https://shaneworld.github.io/"><span aria-hidden="true">← 返回</span></a>
+</div>
+
+
+<div class="back">
+    
+</div>
+
+</div>
+
+	</div>
+	
+
+	<div class="footer wrapper">
+	<nav class="nav">
+		<div>2023  Copyright (c) 2023 Shane. All Rights Reserved. </div>
+		
+	</nav>
+</div><script>feather.replace()</script>
+	
+	<script>
+    var enableTruncate =  true 
+    var filterDepth = false;
+    const MAX_DEPTH = 9; 
+
+    
+    window.addEventListener('DOMContentLoaded', () => {
+        const observerForTableOfContentActiveState = new IntersectionObserver(entries => {
+            entries.reverse().forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    var selected = document.querySelectorAll(`nav li a[href="#${id}"]`)
+                    if (selected != null) {
+                        selected.forEach(s => {
+                            if (s != null) {
+                                var depth = getDepth(s.parentElement);
+                                if (filterDepth && depth <= MAX_DEPTH) {
+                                    clearActiveStatesInTableOfContents();
+                                    s.parentElement.classList.add('active')
+                                }
+                            } else if (!filterDepth) {
+                                clearActiveStatesInTableOfContents();
+                                s.parentElement.classList.add('active');
+                            }
+                        }
+                        )
+                    }
+
+                }
+            });
+        });
+        document.querySelectorAll('h1[id],h2[id],h3[id],h4[id]').forEach((section) => {
+            observerForTableOfContentActiveState.observe(section);
+        });
+
+    });
+
+    
+    function isVisible(elem) {
+        if (!(elem instanceof Element)) return false; 
+        const style = getComputedStyle(elem);
+        if (style.display === 'none') return false;
+        if (style.visibility !== 'visible') return false;
+        if (style.opacity < 0.1) return false;
+        if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+            elem.getBoundingClientRect().width === 0) {
+            return false;
+        }
+        const elemCenter = {
+            x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+            y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+        };
+        if (elemCenter.x < 0) return false;
+        if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+        if (elemCenter.y < 0) return false;
+        if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+        let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+        do {
+            if (pointContainer === elem) return true;
+        } while (pointContainer = pointContainer.parentNode);
+        return false;
+    }
+
+
+    function clearActiveStatesInTableOfContents() {
+        document.querySelectorAll('nav li').forEach((section) => {
+            section.classList.remove('active');
+        });
+    }
+
+    function getDepth(parentElement) {
+        var depth = 0;
+        while (parentElement !== null && parentElement.tagName.toLowerCase() !== 'ul') {
+            depth++;
+            parentElement = parentElement.parentElement;
+        }
+        return depth;
+    }
+
+    function navItems() {
+        
+        var nestedListItems = document.querySelectorAll('nav nav li a');
+        return Array.from(nestedListItems).filter(listItem =>
+            listItem.href != null && listItem.hash.startsWith("#")
+        )
+    }
+
+    function lasItemInNavBarVisible() {
+        var lastItem = navItems().slice(-1)[0]
+        return isVisible(lastItem)
+    }
+
+
+    
+    document.addEventListener('DOMContentLoaded', function () {
+        if (!enableTruncate) return;
+        var navBar = navItems()
+        console.log(navBar)
+        if (!lasItemInNavBarVisible()) {
+            filterDepth = true;
+            
+            navBar.forEach(function (listItem) {
+                var depth = getDepth(listItem.parentElement);
+
+                if (depth > MAX_DEPTH) {
+                    listItem.parentElement.classList.add('depth-nested');
+                }
+            });
+        }
+
+    });
+
+</script>
+
+	
+</body>
+
+</html>

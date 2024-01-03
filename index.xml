@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Copyright (c) 2023 Shane. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 01 Jan 2024 10:10:37 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 02 Jan 2024 18:21:01 +0800</lastBuildDate>
     <atom:link href="https://shaneworld.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacking Rust：通用编程概念</title>
+      <link>https://shaneworld.github.io/2024/01/hacking-rust%E9%80%9A%E7%94%A8%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Tue, 02 Jan 2024 18:21:01 +0800</pubDate>
+      <guid>https://shaneworld.github.io/2024/01/hacking-rust%E9%80%9A%E7%94%A8%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/</guid>
+      <description>变量和可变性 默认情况下，变量是不可变的。以下代码是错误的：&#xA;1 2 3 4 5 6 fn main() { let x = 5; println!(&amp;#34;The value of x is: {}&amp;#34;, x); x = 6; println!(&amp;#34;The value of x is: {}&amp;#34;, x); } 如果需要更改变量，需要声明可变类型：&#xA;1 let mut x = 1; 常量 常量是绑定到一个常量名且不允许更改值。常量和变量之间存在一些差异：&#xA;常量无法使用 mut，常量自始自终都无法改变，其语法如下：&#xA;1 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3; 常量的值必须注明类型。&#xA;常量可以在任何作用域内声明，包括全局作用域。&#xA;常量一般用大写字母加下划线来命名。&#xA;常量表达式常常用计算式这种更容易理解的方式来命名，而不是直接计算出结果。&#xA;遮蔽 我们可以声明和前面变量相同名称的变量，但是会覆盖原来变量的值。&#xA;1 2 3 let x = 1; let x = x + 1; // 结果是：x = 2 mut 和遮蔽之间的区别：遮蔽可以改变变量的类型，而 mut 不可以。</description>
+    </item>
     <item>
       <title>2024新年第一天</title>
       <link>https://shaneworld.github.io/2024/01/2024%E6%96%B0%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%A4%A9/</link>

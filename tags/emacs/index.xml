@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>emacs on Shane&#39;s Blog</title>
+    <link>https://shaneworld.github.io/tags/emacs/</link>
+    <description>Recent content in emacs on Shane&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright (c) 2023 Shane. All Rights Reserved.</copyright>
+    <lastBuildDate>Thu, 04 Jan 2024 20:19:57 +0800</lastBuildDate>
+    <atom:link href="https://shaneworld.github.io/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 基础配置</title>
+      <link>https://shaneworld.github.io/2024/01/emacs-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Thu, 04 Jan 2024 20:19:57 +0800</pubDate>
+      <guid>https://shaneworld.github.io/2024/01/emacs-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</guid>
+      <description>因为很眼馋 emacs 的 org mode，再加上在 ucb 的 CS61A 课上学了一点 scheme，这门语言和 elisp 很相似，因此对于 emacs 的配置又有了信心，于是便想闲时折腾以下 emacs 配置。目前的主力编辑器还是 neovim，因为我已经基于 neovim 建立了一整套很舒服的工作流，如果没有非换不可的理由，暂时还是没有转 emacs 的想法。&#xA;配置文件路径 emacs 的默认配置文件在 ~/.emacs.d/ 或者 ~/.emacs。emacs 会自动执行 ~/.emacs.d/init.el 文件。&#xA;配置文件结构 我准备采用 require 和 provide 对 emacs 的配置文件进行模块化配置。&#xA;在 .emacs.d 文件夹中新建 lisp/custom.el。然后新建 init.el 文件，在其中添加以下内容：&#xA;1 2 3 4 5 6 7 8 9 10 ;; 将 lisp 文件夹添加入加载路径 (add-to-list &amp;#39;load-path &amp;#34;~/.emacs.d/lisp&amp;#34;) ;; 以下为需要包含的模块 ;; 将自动生成的 custom 配置自定义存放位置 (setq custom-file &amp;#34;~/.emacs.d/lisp/custom.el&amp;#34;) (unless (file-exists-p custom-file) ;; 如果该文件不存在 (write-region &amp;#34;&amp;#34; nil custom-file)) ;; 写入一个空内容，相当于 touch 一下它 (load custom-file) 基础配置 emacs 默认的界面比较简陋，需要稍加美化一下。</description>
+    </item>
+  </channel>
+</rss>

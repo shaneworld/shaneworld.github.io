@@ -2,29 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://shaneworld.github.io/tags/emacs/</loc>
+    <lastmod>2024-01-04T20:19:57+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/2024/01/emacs-%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE/</loc>
+    <lastmod>2024-01-04T20:19:57+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/posts/</loc>
+    <lastmod>2024-01-04T20:19:57+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/</loc>
+    <lastmod>2024-01-04T20:19:57+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/tags/</loc>
+    <lastmod>2024-01-04T20:19:57+08:00</lastmod>
+  </url><url>
     <loc>https://shaneworld.github.io/2024/01/hacking-rust%E9%80%9A%E7%94%A8%E7%BC%96%E7%A8%8B%E6%A6%82%E5%BF%B5/</loc>
     <lastmod>2024-01-02T18:21:01+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/tags/hacking-rust/</loc>
     <lastmod>2024-01-02T18:21:01+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/posts/</loc>
-    <lastmod>2024-01-02T18:21:01+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/</loc>
-    <lastmod>2024-01-02T18:21:01+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/tags/</loc>
-    <lastmod>2024-01-02T18:21:01+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/tags/2024/</loc>
-    <lastmod>2024-01-01T10:10:37+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/2024/01/2024%E6%96%B0%E5%B9%B4%E7%AC%AC%E4%B8%80%E5%A4%A9/</loc>
-    <lastmod>2024-01-01T10:10:37+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/tags/%E6%96%B0%E5%B9%B4/</loc>
-    <lastmod>2024-01-01T10:10:37+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/tags/neovim/</loc>
     <lastmod>2023-12-30T18:35:05+08:00</lastmod>

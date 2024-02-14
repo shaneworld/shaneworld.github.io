@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Pages on Shane&#39;s blog</title>
+        <link>https://shaneworld.github.io/page/</link>
+        <description>Recent content in Pages on Shane&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Shane</copyright>
+        <lastBuildDate>Tue, 28 May 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://shaneworld.github.io/page/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>归档</title>
+        <link>https://shaneworld.github.io/archives/</link>
+        <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+        
+        <guid>https://shaneworld.github.io/archives/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>关于</title>
+        <link>https://shaneworld.github.io/%E5%85%B3%E4%BA%8E/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shaneworld.github.io/%E5%85%B3%E4%BA%8E/</guid>
+        <description>&lt;p&gt;该不该搁下重重的壳&lt;/p&gt;
+&lt;p&gt;寻找到底哪里有蓝天&lt;/p&gt;
+&lt;p&gt;随着轻轻的风轻轻地飘&lt;/p&gt;
+&lt;p&gt;历经的伤都不感觉疼&lt;/p&gt;
+&lt;p&gt;我要一步一步往上爬&lt;/p&gt;
+&lt;p&gt;等待阳光静静看着它的脸&lt;/p&gt;
+&lt;p&gt;小小的天有大大的梦想&lt;/p&gt;
+&lt;p&gt;重重的壳裹着轻轻地仰望&lt;/p&gt;
+&lt;p&gt;我要一步一步往上爬&lt;/p&gt;
+&lt;p&gt;在最高点乘着叶片往前飞&lt;/p&gt;
+&lt;p&gt;小小的天流过的泪和汗&lt;/p&gt;
+&lt;p&gt;总有一天我有属于我的天&lt;/p&gt;
+&lt;p&gt;我要一步一步往上爬&lt;/p&gt;
+&lt;p&gt;在最高点乘着叶片往前飞&lt;/p&gt;
+&lt;p&gt;任风吹干流过的泪和汗&lt;/p&gt;
+&lt;p&gt;我要一步一步往上爬&lt;/p&gt;
+&lt;p&gt;等待阳光静静看着它的脸&lt;/p&gt;
+&lt;p&gt;小小的天有大大的梦想&lt;/p&gt;
+&lt;p&gt;我有属于我的天&lt;/p&gt;
+&lt;p&gt;任风吹干流过的泪和汗&lt;/p&gt;
+&lt;p&gt;总有一天我有属于我的天&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>搜索</title>
+        <link>https://shaneworld.github.io/search/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shaneworld.github.io/search/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>友链</title>
+        <link>https://shaneworld.github.io/%E5%8F%8B%E9%93%BE/</link>
+        <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+        
+        <guid>https://shaneworld.github.io/%E5%8F%8B%E9%93%BE/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

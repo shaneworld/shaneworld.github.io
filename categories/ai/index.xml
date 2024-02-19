@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>ai on Shane&#39;s blog</title>
+        <link>https://shaneworld.github.io/categories/ai/</link>
+        <description>Recent content in ai on Shane&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Shane</copyright>
+        <lastBuildDate>Mon, 19 Feb 2024 16:32:23 +0800</lastBuildDate><atom:link href="https://shaneworld.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Search Algorithm</title>
+        <link>https://shaneworld.github.io/p/search-algorithm/</link>
+        <pubDate>Mon, 19 Feb 2024 16:32:23 +0800</pubDate>
+        
+        <guid>https://shaneworld.github.io/p/search-algorithm/</guid>
+        <description>&lt;img src="https://gitee.com/shanegitee/pic/raw/master/search.webp" alt="Featured image of post Search Algorithm" /&gt;&lt;h2 id=&#34;agent-代理&#34;&gt;Agent (代理)&lt;/h2&gt;
+&lt;p&gt;在人工智能中，代理是能够感知环境，做出决策、并执行行动的实体。代理是人工智能领域的核心组成部分，其目标是通过与环境的交互实现特定的任务或者目标。&lt;/p&gt;
+&lt;p&gt;定义一个任务环境我们用 &lt;strong&gt;PEAS&lt;/strong&gt; 描述，也就是&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;P&lt;/strong&gt;erformance Measure：代理尝试增加什么组件&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;E&lt;/strong&gt;nvironment：总结代理在哪里采取行动并且会产生什么影响&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;A&lt;/strong&gt;ctuators&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;S&lt;/strong&gt;ensors：和上一个元素一样，定义代理与环境交互的方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;代理的设计很大程度上取决于代理所在的环境。以下是一些特殊的环境：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;部分可观察的环境：区别于完全可见的环境。&lt;/li&gt;
+&lt;li&gt;随机环境：区别于确定性的环境。&lt;/li&gt;
+&lt;li&gt;多代理的环境：此时代理的行为需要具有随机性，避免和其他代理的冲突和竞争，同时也能提高探索能力。&lt;/li&gt;
+&lt;li&gt;静态环境：相对于动态环境。&lt;/li&gt;
+&lt;li&gt;具有已知物理特征的环境。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;state-space-and-search-problems&#34;&gt;State Space and Search Problems&lt;/h2&gt;
+&lt;p&gt;搜索问题都包含 6 个重要元素：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;A state space：在给定世界中所有可能的状态&lt;/li&gt;
+&lt;li&gt;A set of actions&lt;/li&gt;
+&lt;li&gt;A transition model：输出具体行为作用到当前状态后得到的状态&lt;/li&gt;
+&lt;li&gt;An action cost：采取行动的消耗&lt;/li&gt;
+&lt;li&gt;A start state：代理初始状态&lt;/li&gt;
+&lt;li&gt;A goal test：一个函数，以当前状态作为输入，判断是否达到目标状态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;从初始状态到目标状态的一条路径我们称为 &lt;strong&gt;plan&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;需要区分&lt;strong&gt;世界状态（word state）和搜索状态（search state）&lt;/strong&gt;。一个世界状态包含当前状态的所有信息，而一个搜索状态只包含当前这个 plan 所必需的信息。&lt;/p&gt;
+&lt;h2 id=&#34;state-space-size&#34;&gt;State Space Size&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;状态空间大小&lt;/strong&gt;用来估计解决搜索问题的时间。计算方法是&lt;u&gt;将所有变量可能的个数相乘，也就是计算当前世界中所有可能的状态组合。&lt;/u&gt;&lt;/p&gt;
+&lt;h2 id=&#34;state-space-graphs-and-search-trees&#34;&gt;State Space Graphs and Search Trees&lt;/h2&gt;
+&lt;p&gt;状态空间图中每个节点（状态）只能出现一次，状态之间用箭头相连。而在搜索树中，每个节点可能出现多次，并且每个节点都代表存在于状态空间图中的一整条路径（因为你可以向上溯源）。&lt;/p&gt;
+&lt;h2 id=&#34;uninformed-search&#34;&gt;Uninformed Search&lt;/h2&gt;
+&lt;p&gt;表示一个 plan 的标准方法是使用一个 frontier 来解析节点。这类问题使用树搜索。具体伪代码见笔记。&lt;/p&gt;
+&lt;h2 id=&#34;depth-first-search&#34;&gt;Depth-First Search&lt;/h2&gt;
+&lt;p&gt;深度优先搜索。每次认准一条路走到底。遵循&lt;strong&gt;后进先出&lt;/strong&gt; stack 的原则。&lt;/p&gt;
+&lt;h2 id=&#34;breath-first-search&#34;&gt;Breath-First Search&lt;/h2&gt;
+&lt;p&gt;广度优先搜索。每次选择最近的路径探索。遵循&lt;strong&gt;先进后出&lt;/strong&gt;的原则。&lt;/p&gt;
+&lt;h2 id=&#34;uniformed-cost-search&#34;&gt;Uniformed Cost Search&lt;/h2&gt;
+&lt;p&gt;在前面的算法基础上加入了对每个 action 的 cost 的考量。&lt;/p&gt;
+&lt;p&gt;关于以上算法的理解个人认为 Harvard 的 CS50AI 的讲解更加透彻。具体链接&lt;a class=&#34;link&#34; href=&#34;https://cs50.harvard.edu/ai/2024/notes/0/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;在这里&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Mathematical Formula</title>
+        <link>https://shaneworld.github.io/p/mathematical-formula/</link>
+        <pubDate>Mon, 19 Feb 2024 13:31:12 +0800</pubDate>
+        
+        <guid>https://shaneworld.github.io/p/mathematical-formula/</guid>
+        <description>&lt;img src="https://gitee.com/shanegitee/pic/raw/master/math-color.webp" alt="Featured image of post Mathematical Formula" /&gt;&lt;h2 id=&#34;贝叶斯定理-bayes-theorem&#34;&gt;贝叶斯定理 (Bayes&amp;rsquo; theorem)&lt;/h2&gt;
+&lt;p&gt;计算条件概率，适用于人工智能概率计算。&lt;/p&gt;
+&lt;p&gt;$$ P(A|B) = \frac{P(A)P(B|A)}{P(B)} $$&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

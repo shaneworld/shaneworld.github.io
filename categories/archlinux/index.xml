@@ -161,12 +161,10 @@
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
 &lt;td class=&#34;lntd&#34;&gt;
-&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fc-cache
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;fc-cache -f -v
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;ul&gt;
-&lt;li&gt;如果此时还是没有效果，则需要重启电脑（建议重启）。&lt;/li&gt;
-&lt;/ul&gt;
+&lt;/div&gt;&lt;p&gt;[EDIT] 2024-02-19 21:07 更新：上面代码中的 &lt;code&gt;monospace&lt;/code&gt; 一栏，可以将自己的 &lt;code&gt;nerd font&lt;/code&gt; 添加到首选项，这样系统的 &lt;code&gt;monospace&lt;/code&gt; 字体就会链接到你自己定义的 &lt;code&gt;nerd font&lt;/code&gt; 上去了，执行 &lt;code&gt;fc-match monospace&lt;/code&gt; 查看结果。&lt;/p&gt;
 </description>
         </item>
         

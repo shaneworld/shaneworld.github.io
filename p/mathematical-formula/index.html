@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='问题 Arch Linux 中，不管是终端还是 fcitx5 输入法中的 emoji 都显示为乱码。 解决办法 安装 emoji 字体，以 noto-fonts-emoji 为例： 1 sudo pacman -S noto-fonts-emoji 更新字体配置 进入 /etc/fonts 字体配置目录下，sudo 权限'>
-<title>Archlinux Emoji</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='整理一些常用的数学公式...'>
+<title>Mathematical Formula</title>
 
-<link rel='canonical' href='https://shaneworld.github.io/p/archlinux-emoji/'>
+<link rel='canonical' href='https://shaneworld.github.io/p/mathematical-formula/'>
 
-<link rel="stylesheet" href="/scss/style.min.eb37146d81829e93937393617106ec52a7bbdbc5de03405cea572853105ca3ca.css"><meta property='og:title' content='Archlinux Emoji'>
-<meta property='og:description' content='问题 Arch Linux 中，不管是终端还是 fcitx5 输入法中的 emoji 都显示为乱码。 解决办法 安装 emoji 字体，以 noto-fonts-emoji 为例： 1 sudo pacman -S noto-fonts-emoji 更新字体配置 进入 /etc/fonts 字体配置目录下，sudo 权限'>
-<meta property='og:url' content='https://shaneworld.github.io/p/archlinux-emoji/'>
+<link rel="stylesheet" href="/scss/style.min.eb37146d81829e93937393617106ec52a7bbdbc5de03405cea572853105ca3ca.css"><meta property='og:title' content='Mathematical Formula'>
+<meta property='og:description' content='整理一些常用的数学公式...'>
+<meta property='og:url' content='https://shaneworld.github.io/p/mathematical-formula/'>
 <meta property='og:site_name' content='Shane&#39;s blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-01-11T21:49:42&#43;08:00'/><meta property='article:modified_time' content='2024-01-11T21:49:42&#43;08:00'/><meta property='og:image' content='https://gitee.com/shanegitee/pic/raw/master/emoji-bg.webp' />
-<meta name="twitter:title" content="Archlinux Emoji">
-<meta name="twitter:description" content="问题 Arch Linux 中，不管是终端还是 fcitx5 输入法中的 emoji 都显示为乱码。 解决办法 安装 emoji 字体，以 noto-fonts-emoji 为例： 1 sudo pacman -S noto-fonts-emoji 更新字体配置 进入 /etc/fonts 字体配置目录下，sudo 权限"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='https://gitee.com/shanegitee/pic/raw/master/emoji-bg.webp' />
+<meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:published_time' content='2024-02-19T13:31:12&#43;08:00'/><meta property='article:modified_time' content='2024-02-19T13:31:12&#43;08:00'/><meta property='og:image' content='https://gitee.com/shanegitee/pic/raw/master/math-color.webp' />
+<meta name="twitter:title" content="Mathematical Formula">
+<meta name="twitter:description" content="整理一些常用的数学公式..."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='https://gitee.com/shanegitee/pic/raw/master/math-color.webp' />
     <link rel="shortcut icon" href="/icon.svg" />
 
     </head>
@@ -81,8 +81,7 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#问题">问题</a></li>
-    <li><a href="#解决办法">解决办法</a></li>
+    <li><a href="#贝叶斯定理-bayes-theorem">贝叶斯定理 (Bayes&rsquo; theorem)</a></li>
   </ol>
 </nav>
         </div>
@@ -97,9 +96,9 @@
     <article class="has-image main-article">
     <header class="article-header">
         <div class="article-image">
-            <a href="/p/archlinux-emoji/">
+            <a href="/p/mathematical-formula/">
                 
-                    <img src="https://gitee.com/shanegitee/pic/raw/master/emoji-bg.webp" loading="lazy" alt="Featured image of post Archlinux Emoji" />
+                    <img src="https://gitee.com/shanegitee/pic/raw/master/math-color.webp" loading="lazy" alt="Featured image of post Mathematical Formula" />
                 
             </a>
         </div>
@@ -109,8 +108,12 @@
     
     <header class="article-category">
         
-            <a href="/categories/archlinux/" >
-                archlinux
+            <a href="/categories/math/" >
+                math
+            </a>
+        
+            <a href="/categories/ai/" >
+                ai
             </a>
         
     </header>
@@ -118,9 +121,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/p/archlinux-emoji/">Archlinux Emoji</a>
+            <a href="/p/mathematical-formula/">Mathematical Formula</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            整理一些常用的数学公式...
+        </h3>
         
     </div>
 
@@ -140,7 +147,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">2024/01/11</time>
+                <time class="article-time--published">2024/02/19</time>
             </div>
         
 
@@ -171,108 +178,9 @@
     <section class="article-content">
     
     
-    <h2 id="问题">问题</h2>
-<p>Arch Linux 中，不管是终端还是 fcitx5 输入法中的 emoji 都显示为乱码。</p>
-<h2 id="解决办法">解决办法</h2>
-<ul>
-<li>安装 emoji 字体，以 <code>noto-fonts-emoji</code> 为例：</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">sudo pacman -S noto-fonts-emoji
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>更新字体配置</li>
-</ul>
-<p>进入 <code>/etc/fonts</code> 字体配置目录下，<code>sudo</code> 权限创建并编辑 <code>local.conf</code> 文件，注意不要去修改 <code>font.conf</code> 文件。在 <code>local.conf</code> 文件中添加以下内容：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span><span class="lnt">29
-</span><span class="lnt">30
-</span><span class="lnt">31
-</span><span class="lnt">32
-</span><span class="lnt">33
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34;?&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE fontconfig SYSTEM &#34;fonts.dtd&#34;&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;fontconfig&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;alias&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;family&gt;</span>sans-serif<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;prefer&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Sans<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Color Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>DejaVu Sans<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/prefer&gt;</span> 
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;/alias&gt;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;alias&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;family&gt;</span>serif<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;prefer&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Serif<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Color Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>Noto Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">     <span class="nt">&lt;family&gt;</span>DejaVu Serif<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/prefer&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;/alias&gt;</span>
-</span></span><span class="line"><span class="cl"> 
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;alias&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;family&gt;</span>monospace<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;prefer&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;family&gt;</span>Noto Mono<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;family&gt;</span>Noto Color Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;family&gt;</span>Noto Emoji<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;family&gt;</span>DejaVu Sans Mono<span class="nt">&lt;/family&gt;</span>
-</span></span><span class="line"><span class="cl">   <span class="nt">&lt;/prefer&gt;</span>
-</span></span><span class="line"><span class="cl"> <span class="nt">&lt;/alias&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/fontconfig&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>更新字体缓存</li>
-</ul>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">fc-cache -f -v
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>[EDIT] 2024-02-19 21:07 更新：上面代码中的 <code>monospace</code> 一栏，可以将自己的 <code>nerd font</code> 添加到首选项，这样系统的 <code>monospace</code> 字体就会链接到你自己定义的 <code>nerd font</code> 上去了，执行 <code>fc-match monospace</code> 查看结果。</p>
+    <h2 id="贝叶斯定理-bayes-theorem">贝叶斯定理 (Bayes&rsquo; theorem)</h2>
+<p>计算条件概率，适用于人工智能概率计算。</p>
+<p>$$ P(A|B) = \frac{P(A)P(B|A)}{P(B)} $$</p>
 
 </section>
 
@@ -322,18 +230,18 @@
             
                 
 <article class="has-image">
-    <a href="/p/%E8%A7%A3%E5%86%B3-arch-linux-%E4%B8%8B-hyprland-%E9%9F%B3%E9%A2%91%E8%BE%93%E5%87%BA%E9%97%AE%E9%A2%98/">
+    <a href="/p/search-algorithm/">
         
         
             <div class="article-image">
                 
-                    <img src="https://gitee.com/shanegitee/pic/raw/master/archlinux-logo-full.webp" loading="lazy" data-key="" data-hash="https://gitee.com/shanegitee/pic/raw/master/archlinux-logo-full.webp"/>
+                    <img src="https://gitee.com/shanegitee/pic/raw/master/search.webp" loading="lazy" data-key="" data-hash="https://gitee.com/shanegitee/pic/raw/master/search.webp"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">解决 Arch Linux 下 Hyprland 音频输出问题</h2>
+            <h2 class="article-title">Search Algorithm</h2>
         </div>
     </a>
 </article>

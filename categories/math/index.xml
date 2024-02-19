@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>math on Shane&#39;s blog</title>
+        <link>https://shaneworld.github.io/categories/math/</link>
+        <description>Recent content in math on Shane&#39;s blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>Shane</copyright>
+        <lastBuildDate>Mon, 19 Feb 2024 13:31:12 +0800</lastBuildDate><atom:link href="https://shaneworld.github.io/categories/math/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Mathematical Formula</title>
+        <link>https://shaneworld.github.io/p/mathematical-formula/</link>
+        <pubDate>Mon, 19 Feb 2024 13:31:12 +0800</pubDate>
+        
+        <guid>https://shaneworld.github.io/p/mathematical-formula/</guid>
+        <description>&lt;img src="https://gitee.com/shanegitee/pic/raw/master/math-color.webp" alt="Featured image of post Mathematical Formula" /&gt;&lt;h2 id=&#34;贝叶斯定理-bayes-theorem&#34;&gt;贝叶斯定理 (Bayes&amp;rsquo; theorem)&lt;/h2&gt;
+&lt;p&gt;计算条件概率，适用于人工智能概率计算。&lt;/p&gt;
+&lt;p&gt;$$ P(A|B) = \frac{P(A)P(B|A)}{P(B)} $$&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

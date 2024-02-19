@@ -3,18 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://shaneworld.github.io/</loc>
-    <lastmod>2024-02-14T11:50:06+08:00</lastmod>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/categories/ai/</loc>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/categories/</loc>
-    <lastmod>2024-02-14T11:50:06+08:00</lastmod>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/categories/</loc>
-    <lastmod>2024-02-14T11:50:06+08:00</lastmod>
-  </url><url>
-    <loc>https://shaneworld.github.io/categories/neovim/</loc>
-    <lastmod>2024-02-14T11:50:06+08:00</lastmod>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/post/</loc>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/p/search-algorithm/</loc>
+    <lastmod>2024-02-19T16:32:23+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/categories/math/</loc>
+    <lastmod>2024-02-19T13:31:12+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/p/mathematical-formula/</loc>
+    <lastmod>2024-02-19T13:31:12+08:00</lastmod>
+  </url><url>
+    <loc>https://shaneworld.github.io/categories/nvim/</loc>
     <lastmod>2024-02-14T11:50:06+08:00</lastmod>
   </url><url>
     <loc>https://shaneworld.github.io/p/pyright-import-xxx-could-not-be-resolved-%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3/</loc>
@@ -38,9 +50,13 @@
     <loc>https://shaneworld.github.io/archives/</loc>
     <lastmod>2019-05-28T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://shaneworld.github.io/categories/ai/</loc>
+  </url><url>
     <loc>https://shaneworld.github.io/categories/archlinux/</loc>
   </url><url>
-    <loc>https://shaneworld.github.io/categories/neovim/</loc>
+    <loc>https://shaneworld.github.io/categories/math/</loc>
+  </url><url>
+    <loc>https://shaneworld.github.io/categories/nvim/</loc>
   </url><url>
     <loc>https://shaneworld.github.io/tags/</loc>
   </url><url>

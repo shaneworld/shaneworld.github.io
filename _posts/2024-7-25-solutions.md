@@ -5,7 +5,7 @@ date: 2024-07-25
 description: 解决 Linux 下遇到的各种小问题
 categories: [Linux]
 tags: [archlinux]
-comments: false
+comments: true
 toc: true
 ---
 
@@ -23,7 +23,7 @@ sudo pacman -S noto-fonts-emoji
 
 在 `/etd/fonts` 目录下新建文件 `local.conf`，写入以下内容：
 
-```conf
+```xml
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>

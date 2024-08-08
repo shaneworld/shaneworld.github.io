@@ -171,3 +171,19 @@ WantedBy=multi-user.target
 ```bash
 sudo systemctl enable bluetooth-unblock.service
 ```
+
+## Docker 无权访问 `docker.socket`
+
+使用 `systemctl start docker` 后执行 docker 相关命令报错：
+
+```
+permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post "http://%2Fvar%2Frun%2Fdocker.sock/v1.46/images/create?fromImage=nginx&tag=latest": dial unix /var/run/docker.sock: connect: permission denied
+```
+
+这个错误表明我们没有足够的权限来访问 Docker 守护进程的 socket 文件，原因是当前的用户不在docker用户组中。将当前用户添加到用户组：
+
+```shell
+sudo usermod -aG docker $USER
+```
+
+然后重新登录当前用户。

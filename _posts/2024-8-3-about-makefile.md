@@ -7,7 +7,6 @@ categories: [Linux, Makefile]
 tags: [Makefile]
 comments: true
 toc: true
-draft: true
 ---
 
 ## Makefile 简介

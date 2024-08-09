@@ -152,7 +152,7 @@ sudo nvim /etc/systemd/system/bluetooth-unblock.service
 
 添加以下内容：
 
-```service
+```
 [Unit]
 Description=Unblock Bluetooth
 

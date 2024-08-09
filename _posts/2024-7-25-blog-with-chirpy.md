@@ -93,6 +93,12 @@ bundle
 
 文章是位于 `_post` 文件夹下的 `markdown` 文件，关于文章的命名格式、[Front matter](https://jekyllrb.com/docs/front-matter/) 以及特殊格式的书写详见[官方 wiki](https://chirpy.cotes.page/posts/write-a-new-post/) 以及 [Jekyll 官方 wiki](https://jekyllrb.com/docs/)。
 
+## 本地启动站点
+
+```shell
+bundle exec jekyll s
+```
+
 ## 更新站点
 
 如果写了新文章想要发表，只需要使用 git 将本地的更改提交到 GitHub，GitHub Actions 会自动部署（[Auto deploy](https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions)）。站点域名为 `https://USERNAME.github.io`。

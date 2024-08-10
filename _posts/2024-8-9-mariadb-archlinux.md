@@ -1,10 +1,10 @@
 ---
-title: MariaDB
+title: MariaDB 数据库
 author: shane
 date: 2024-08-09
-description: Arch Linux 中的 MariaDB
-categories: [MySQL, MariaDB, archlinux]
-tags: [MySQL, archlinux]
+description: Arch Linux 官方默认的 MySQL 分支 MariaDB
+categories: [SQL]
+tags: [MySQL, MariaDB, archlinux]
 comments: true
 toc: true
 ---

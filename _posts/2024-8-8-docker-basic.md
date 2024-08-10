@@ -3,7 +3,7 @@ title: Docker 基础
 author: shane
 date: 2024-08-08
 description: Docker 容器基础
-categories: [Docker, Linux]
+categories: [Linux]
 tags: [Docker, archlinux]
 comments: true
 toc: true

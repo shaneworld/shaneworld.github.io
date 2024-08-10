@@ -1,9 +1,9 @@
 ---
-title: Makefile 基础语法
+title: 玩转 Makefile（更新中）
 author: shane
 date: 2024-08-03
 description: 关于 Makefile 的基础语法
-categories: [Linux, Makefile]
+categories: [Linux]
 tags: [Makefile]
 comments: true
 toc: true

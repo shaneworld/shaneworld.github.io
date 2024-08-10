@@ -3,7 +3,7 @@ title: 使用 jekyll 搭建自己的博客网站
 author: shane
 date: 2024-07-25
 description: Linux 下使用 jekyll-theme-chirpy 建站
-categories: [Linux]
+categories: [Blog]
 tags: [archlinux, blog, jekyll]
 comments: true
 toc: true

@@ -4,5 +4,10 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-> Add Markdown syntax content to file `_tabs/about.md`{: .filepath } and it will show up on this page.
-{: .prompt-tip }
+然而，尽管我对生命的意义充满疑惑，我依然觉得，正是这种疑惑让我的生命变得真实而充实。
+
+因为正是在寻找答案的过程中，我才能够更深刻地认识自己，认识这个世界。
+
+或许答案并不重要，重要的是我们在寻找答案的过程中，如何去体验生命的每一个瞬间。
+
+或许生命的意义就在于此：在孤独中寻求与自我的和解，在困惑中寻找内心的平静，在无尽的追问中找到片刻的安宁。

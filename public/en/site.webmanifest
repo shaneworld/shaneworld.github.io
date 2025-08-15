@@ -1,0 +1,25 @@
+{
+  "background_color": "#ffffff",
+  "categories": [
+    "blog",
+    "technology",
+    "education"
+  ],
+  "description": "Log something useless but interesting.",
+  "dir": "ltr",
+  "display": "standalone",
+  "icons": [
+    {
+      "sizes": "any",
+      "src": "/fav.svg",
+      "type": "image/svg+xml"
+    }
+  ],
+  "lang": "en-US",
+  "name": "Shane's Log",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "short_name": "ShaneLog",
+  "start_url": "/",
+  "theme_color": "#09090b"
+}

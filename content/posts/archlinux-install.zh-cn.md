@@ -8,7 +8,7 @@ draft: false
 categories: ["Linux"]
 tags: ["Arch Linux"]
 mermaid: false
-comments: false
+comments: true
 ---
 
 从零安装 minimal Arch Linux

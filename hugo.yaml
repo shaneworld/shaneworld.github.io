@@ -218,17 +218,17 @@ params:
     system: "giscus"
 
     giscus:
-      repo: "tom2almighty/hugo-narrow-giscus"
-      repoId: "R_kgDOO2gwLg"
+      repo: "shaneworld/shaneworld.github.io"
+      repoId: "R_kgDOPeiMsQ"
       category: "General"
-      categoryId: "DIC_kwDOO2gwLs4CrEaf"
-      mapping: "pathname"
+      categoryId: "DIC_kwDOPeiMsc4CuN6B"
+      mapping: "title"
       strict: "0"
       reactionsEnabled: "1"
       emitMetadata: "0"
       inputPosition: "bottom"
       theme: "preferred_color_scheme"
-      lang: "en"
+      lang: "zh-CN"
 
   analytics:
     enabled: false

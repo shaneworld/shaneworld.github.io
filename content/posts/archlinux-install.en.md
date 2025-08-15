@@ -8,7 +8,7 @@ draft: false
 categories: ["Linux"]
 tags: ["Arch Linux"]
 mermaid: false
-comments: false
+comments: true
 ---
 
 Install MINIMAL Arch Linux from the very beginning...

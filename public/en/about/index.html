@@ -1010,7 +1010,94 @@
   
   
   
+  <section
+    id="comments"
+    class="bg-card border-border mx-auto mt-12 max-w-4xl rounded-2xl border p-8 px-4 shadow-sm">
+    <div class="bg-card">
+      <h2
+        class="text-foreground mb-6 flex items-center gap-3 text-2xl font-bold">
+        
+  <svg class="h-6 w-6"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24">
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+
+</svg>
+        Comments
+      </h2>
+
+      <div class="comments-container">
+
+
+
+
+
+  <div id="giscus-comments" class="giscus-container">
+    <script
+      src="https://giscus.app/client.js"
+      data-repo="shaneworld/shaneworld.github.io"
+      data-repo-id="R_kgDOPeiMsQ"
+      data-category="General"
+      data-category-id="DIC_kwDOPeiMsc4CuN6B"
+      data-mapping="title"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="bottom"
+      data-theme="preferred_color_scheme"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async></script>
+  </div>
+
   
+  <script>
+    (function() {
+      'use strict';
+
+      
+      function updateGiscusTheme() {
+        const iframe = document.querySelector('#giscus-comments iframe.giscus-frame');
+        if (!iframe) return;
+
+        
+        const isDark = document.documentElement.classList.contains('dark');
+        const theme = isDark ? 'dark' : 'light';
+
+        
+        iframe.contentWindow.postMessage({
+          giscus: {
+            setConfig: {
+              theme: theme
+            }
+          }
+        }, 'https://giscus.app');
+      }
+
+      
+      document.addEventListener('themeChanged', updateGiscusTheme);
+
+      
+      const observer = new MutationObserver(function(mutations) {
+        mutations.forEach(function(mutation) {
+          if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
+            updateGiscusTheme();
+          }
+        });
+      });
+
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['class']
+      });
+    })();
+  </script>
+
+</div>
+    </div>
+  </section>
 
     </main>
 
@@ -1276,6 +1363,27 @@
 
     
     
+    
+      <button
+        id="dock-comments"
+        class="text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 xs:px-2 xs:py-1.5 flex flex-shrink-0 items-center gap-2 rounded-lg px-3 py-2 text-sm font-medium transition-all duration-300 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none sm:px-3 sm:py-2"
+        title="Comments"
+        aria-label="Comments">
+        
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24">
+  <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/>
+
+</svg>
+        <span class="hidden sm:inline"
+          >Comments</span
+        >
+      </button>
+
+      
+      <div class="bg-border xs:mx-1 mx-2 h-6 w-px sm:mx-2"></div>
     
 
 

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JVM on Shane&#39;s Log</title>
+    <link>http://localhost:1313/tags/jvm/</link>
+    <description>Recent content in JVM on Shane&#39;s Log</description>
+    <generator>Hugo</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Sat, 30 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JVM 虚拟机</title>
+      <link>http://localhost:1313/posts/jvm-%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+      <pubDate>Sat, 30 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/jvm-%E8%99%9A%E6%8B%9F%E6%9C%BA/</guid>
+      <description>&lt;p&gt;恰好看到一篇包含「&lt;a href=&#34;https://zhuanlan.zhihu.com/p/94498015?utm_source=wechat_timeline&#34;&gt;JVM 基于栈的设计模式&lt;/a&gt;」的好文章，先开个新坑，把「栈」这一部分的内容先写着，其他部分后续再补充。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

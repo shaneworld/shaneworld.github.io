@@ -9,15 +9,15 @@
   content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<title>Arch Linux 安装指南 | Shane&#39;s Log</title>
+<title>Java 反射 | Shane&#39;s Log</title>
 
-<meta name="description" content="从零安装Arch Linux" />
-<meta name="keywords" content="Arch Linux" />
+<meta name="description" content="Java 中反射的使用" />
+<meta name="keywords" content="Java基础" />
 <meta name="author" content="Shane Anderson" />
 <meta name="language" content="en-US" />
 
 <meta name="robots" content="index, follow" />
-<link rel="canonical" href="http://localhost:1313/posts/arch-linux-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/" />
+<link rel="canonical" href="http://localhost:1313/posts/java-%E5%8F%8D%E5%B0%84/" />
 
 
 
@@ -26,32 +26,32 @@
 
 
 <link rel="manifest" href="/site.webmanifest" />
-<meta property="og:url" content="http://localhost:1313/posts/arch-linux-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/">
+<meta property="og:url" content="http://localhost:1313/posts/java-%E5%8F%8D%E5%B0%84/">
   <meta property="og:site_name" content="Shane&#39;s Log">
-  <meta property="og:title" content="Arch Linux 安装指南">
-  <meta property="og:description" content="从零安装Arch Linux">
+  <meta property="og:title" content="Java 反射">
+  <meta property="og:description" content="Java 中反射的使用">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2025-08-15T00:00:00+00:00">
-    <meta property="article:modified_time" content="2025-08-15T00:00:00+00:00">
-    <meta property="article:tag" content="Arch Linux">
+    <meta property="article:published_time" content="2025-08-30T00:00:00+00:00">
+    <meta property="article:modified_time" content="2025-08-30T00:00:00+00:00">
+    <meta property="article:tag" content="Java基础">
     <meta property="og:image" content="http://localhost:1313/images/og-default.avif">
 
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/images/og-default.avif">
-  <meta name="twitter:title" content="Arch Linux 安装指南">
-  <meta name="twitter:description" content="从零安装Arch Linux">
+  <meta name="twitter:title" content="Java 反射">
+  <meta name="twitter:description" content="Java 中反射的使用">
 
 
-  <meta itemprop="name" content="Arch Linux 安装指南">
-  <meta itemprop="description" content="从零安装Arch Linux">
-  <meta itemprop="datePublished" content="2025-08-15T00:00:00+00:00">
-  <meta itemprop="dateModified" content="2025-08-15T00:00:00+00:00">
-  <meta itemprop="wordCount" content="1090">
+  <meta itemprop="name" content="Java 反射">
+  <meta itemprop="description" content="Java 中反射的使用">
+  <meta itemprop="datePublished" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2025-08-30T00:00:00+00:00">
+  <meta itemprop="wordCount" content="1016">
   <meta itemprop="image" content="http://localhost:1313/images/og-default.avif">
-  <meta itemprop="keywords" content="Arch Linux">
+  <meta itemprop="keywords" content="Java基础">
 
 
 
@@ -552,7 +552,7 @@
     class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
     data-dropdown-type="language"
     role="menu"
-    aria-labelledby="language-toggle"><a href="/en/posts/arch-linux-installation-guide/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">English</span></a><a href="/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">简体中文</span></a></div>
+    aria-labelledby="language-toggle"><a href="/en/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">English</span></a><a href="/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">简体中文</span></a></div>
 </div>
 
         
@@ -834,7 +834,7 @@
     class="dropdown-menu border-border bg-popover/95 absolute top-12 right-0 z-[60] hidden w-40 rounded-lg border p-1 shadow-lg backdrop-blur-sm transition-all duration-200 ease-out"
     data-dropdown-type="language"
     role="menu"
-    aria-labelledby="language-toggle"><a href="/en/posts/arch-linux-installation-guide/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">English</span></a><a href="/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">简体中文</span></a></div>
+    aria-labelledby="language-toggle"><a href="/en/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem"><span class="font-medium">English</span></a><a href="/zh-cn/" class="text-accent-foreground hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground flex w-full items-center rounded-md px-4 py-2 text-sm transition-all duration-200 ease-out focus:outline-none" role="menuitem" aria-current="true"><span class="font-medium">简体中文</span></a></div>
 </div>
 
         
@@ -1003,7 +1003,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
 </svg>
-              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">Arch Linux 安装指南</span>
+              <span class="max-w-[8rem] md:max-w-[16rem] lg:max-w-none truncate">Java 反射</span>
             </span>
           </div>
         
@@ -1026,7 +1026,7 @@
 <div class="post-meta">
   
   <h1 class="text-foreground mb-6 text-3xl leading-tight font-bold md:text-4xl">
-    Arch Linux 安装指南
+    Java 反射
   </h1>
 
   
@@ -1046,8 +1046,8 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="发布于"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
-        <time datetime="2025-08-15">
-          2025 年 08 月 15 日
+        <time datetime="2025-08-30">
+          2025 年 08 月 30 日
         </time>
       </div>
 
@@ -1080,7 +1080,7 @@
     stroke="currentColor"
     viewBox="0 0 24 24" aria-label="字数"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7" />
 </svg>
-          <span>1090 字</span>
+          <span>1016 字</span>
         </div>
       
 
@@ -1104,9 +1104,9 @@
             <div class="flex flex-wrap gap-2">
               
                 <a
-                  href="/categories/linux/"
+                  href="/categories/java/"
                   class="bg-primary/10 text-primary hover:bg-primary/20 focus:ring-primary/20 inline-flex items-center rounded-full px-3 py-1 text-sm font-medium transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 hover:shadow-md focus:ring-2 focus:outline-none">
-                  Linux
+                  Java
                 </a>
               
             </div>
@@ -1133,9 +1133,9 @@
             <div class="flex flex-wrap gap-2">
               
                 <a
-                  href="/tags/arch-linux/"
+                  href="/tags/java%E5%9F%BA%E7%A1%80/"
                   class="bg-muted/50 text-muted-foreground hover:bg-primary/10 hover:text-primary focus:ring-primary/20 inline-flex items-center rounded px-2 py-1 text-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:scale-105 focus:ring-2 focus:outline-none">
-                  #Arch Linux
+                  #Java基础
                 </a>
               
             </div>
@@ -1156,24 +1156,21 @@
 
   
   <article class="prose prose-neutral dark:prose-invert mb-12 max-w-none">
-    <p>从零安装 minimal Arch Linux</p>
-<h2 id="安装媒介">安装媒介</h2>
-<ol>
-<li>
-<p>从 <a href="https://archlinux.org/download/">Arch Linux Downloads</a> 下载最新的 ISO 文件</p>
-</li>
-<li>
-<p>下载 <a href="https://rufus.ie/en/">Rufus</a> 制作系统盘工具</p>
-</li>
-<li>
-<p>准备一个空间 &gt; 8GB 的闲置 U 盘作为系统盘</p>
-</li>
-<li>
-<p>进入 BIOS 并设置从 U 盘启动。</p>
-</li>
-</ol>
-<h2 id="网络和时区">网络和时区</h2>
-<p>解锁所有硬件和软件锁：</p>
+    <p>「反射」是 Java 中的一个重要机制，用于在运行时动态地控制类。</p>
+<h2 id="反射的使用场景">反射的使用场景</h2>
+<p>通常我们在写代码的时候就知道需要实例化哪一个类并且运行什么方法，然后通过 <code>new</code> 方法创建类的对象，但是有些时候，我们需要在运行时根据不同情况动态实例化不同类。反射就是帮助我们<strong>在运行时改变程序的调用行为</strong>的方法。</p>
+<h2 id="类加载机制">类加载机制</h2>
+<p>Java 在编译阶段将 Java 文件编译成 .class 字节码文件，类加载器在类加载阶段将 .class 文件加载进内存，同时<strong>实例化一个 java.lang.Class 对象</strong>。</p>
+<ul>
+<li>一个 Class 类（.class 文件）对应一个 Class 对象。</li>
+<li>Class 对象中保存了对应类的基础信息，比如类有几个字段（Field）？有几个构造方法（Constructor）？有几个方法（Method）？有哪些注解（Annotation）？等信息。</li>
+<li>保存类信息对应的 java.lang.Class 对象永远只有一个。</li>
+</ul>
+<h2 id="操作反射的-java-类">操作反射的 Java 类</h2>
+<h3 id="获取-class-对象的方法">获取 Class 对象的方法</h3>
+<ul>
+<li><code>Class.forName(包名和类名)</code></li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -1190,7 +1187,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -1239,7 +1236,7 @@
 
   
   <div class="code-block-content relative" id="code-0">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">rfkill unblock all</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Class</span><span class="w"> </span><span class="n">clazz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&#34;com.shane.java.reflection.User&#34;</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -1472,7 +1469,10 @@
   }
 })();
 </script>
-<p>使用<code>iwctl</code> 工具联网：</p>
+<p>这是反射最常用的方法，也是最能体现反射特性的使用方法。</p>
+<ul>
+<li><code>类名.class</code></li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -1489,7 +1489,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -1538,11 +1538,7 @@
 
   
   <div class="code-block-content relative" id="code-1">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">iwctl
-</span></span><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span> station wlan0 scan  <span class="c1"># 扫描</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span> station wlan0 get-networks  <span class="c1"># 列出所有可用网络</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span> station wlan0 connect SSID  <span class="c1"># 联网</span>
-</span></span><span class="line"><span class="cl"><span class="o">[</span>iwd<span class="o">]</span> exit</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Class</span><span class="w"> </span><span class="n">clazz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">User</span><span class="p">.</span><span class="na">class</span><span class="p">;</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -1775,7 +1771,9 @@
   }
 })();
 </script>
-<p>设置时区：</p>
+<ul>
+<li><code>类对象.getClass()</code></li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -1792,7 +1790,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -1841,7 +1839,8 @@
 
   
   <div class="code-block-content relative" id="code-2">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">timedatectl set-timezone Asia/Shanghai</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">User</span><span class="w"> </span><span class="n">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">User</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Class</span><span class="w"> </span><span class="n">clazz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">user</span><span class="p">.</span><span class="na">getClass</span><span class="p">();</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -2074,8 +2073,8 @@
   }
 })();
 </script>
-<h2 id="分区">分区</h2>
-<p>首先检查目前的磁盘分区情况：</p>
+<h3 id="获取-class-对象的成员变量">获取 Class 对象的成员变量</h3>
+<p>我们定义一个 Student 类：</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -2092,7 +2091,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -2141,7 +2140,29 @@
 
   
   <div class="code-block-content relative" id="code-3">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">lsblk</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">package</span><span class="w"> </span><span class="nn">com.shane.learn.spring.playground</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Student</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">static</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;Student static block&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">staticMethod</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;This is a STATIC METHOD!!&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Student</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">height</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">weight</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">height</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">height</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">weight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">weight</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -2374,7 +2395,7 @@
   }
 })();
 </script>
-<p>找到电脑的主磁盘，通常名字是 <code>nvme0n1</code>，开始分区：</p>
+<p>在 main 函数中通过反射获取 Class 对象：</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -2391,7 +2412,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -2440,7 +2461,7 @@
 
   
   <div class="code-block-content relative" id="code-4">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">cfdisk /dev/nvme0n1</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Class</span><span class="o">&lt;?&gt;</span><span class="w"> </span><span class="n">cls</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&#34;com.shane.learn.spring.playground.Student&#34;</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -2673,34 +2694,9 @@
   }
 })();
 </script>
-<p>我的分区如下：</p>
-<table>
-  <thead>
-      <tr>
-          <th style="text-align: center">挂载点</th>
-          <th style="text-align: center">分区类型</th>
-          <th style="text-align: center">大小</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td style="text-align: center">/boot</td>
-          <td style="text-align: center">EFI System</td>
-          <td style="text-align: center">1G</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">[SWAP]</td>
-          <td style="text-align: center">Linux Swap</td>
-          <td style="text-align: center">8G</td>
-      </tr>
-      <tr>
-          <td style="text-align: center">/</td>
-          <td style="text-align: center">Linux filesystem</td>
-          <td style="text-align: center">All left spaces</td>
-      </tr>
-  </tbody>
-</table>
-<p>分区完后需要格式化分区：</p>
+<ul>
+<li>获取<strong>非私有</strong>的成员变量，包含从父类继承的成员变量</li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -2717,7 +2713,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -2766,9 +2762,10 @@
 
   
   <div class="code-block-content relative" id="code-5">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mkfs.fat -F <span class="m">32</span> /dev/nvme0n1p1
-</span></span><span class="line"><span class="cl">mkswap /dev/nvme0n1p2
-</span></span><span class="line"><span class="cl">mkfs.btrfs -f /dev/nvme0n1p3</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Field</span><span class="o">[]</span><span class="w"> </span><span class="n">filed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">getFields</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Field</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">filed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">field</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -3001,7 +2998,9 @@
   }
 })();
 </script>
-<p>挂载分区：</p>
+<ul>
+<li>获取<strong>所有</strong>成员变量，但是不包含从父类继承的成员变量</li>
+</ul>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -3018,7 +3017,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -3067,9 +3066,10 @@
 
   
   <div class="code-block-content relative" id="code-6">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">mount /dev/nvme0n1p3 /mnt
-</span></span><span class="line"><span class="cl">mount --mkdir /dev/nvme0n1p1 /mnt/boot
-</span></span><span class="line"><span class="cl">swapon /dev/nvme0n1p2</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">filed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">getDeclaredFields</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Field</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">filed</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">field</span><span class="p">.</span><span class="na">getName</span><span class="p">());</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -3302,8 +3302,15 @@
   }
 })();
 </script>
-<h2 id="安装系统">安装系统</h2>
-<p>首先需要通过下载 mirrorlist 更改下载源解决网络问题：</p>
+<h3 id="获取-class-对象中的方法">获取 Class 对象中的方法</h3>
+<ul>
+<li><code>getMethods()</code>：获取 Class 对象代表的类的所有的非私有方法，数组，<strong>包含</strong>从父类继承而来的方法</li>
+<li><code>getDeclaredMethods()</code>：获取 Class 对象代表的类定义的所有的方法，数组，但是<strong>不包含</strong>从父类继承而来的方法</li>
+<li><code>getMethod(methodName)</code>：获取 Class 对象代表的类的指定方法名的非私有方法</li>
+<li><code>getDeclaredMethod(methodName)</code>：获取 Class 对象代表的类的指定方法名的方法</li>
+</ul>
+<h4 id="调用方法">调用方法</h4>
+<p><code>invoke()</code> 方法需要传入对象，因此需要先实例化类。</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -3320,7 +3327,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -3369,7 +3376,9 @@
 
   
   <div class="code-block-content relative" id="code-7">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">curl -L <span class="s1">&#39;https://archlinux.org/mirrorlist/?country=CN&amp;protocol=https&#39;</span> -o /etc/pacman.d/mirrorlist</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Method</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">getDeclaredMethod</span><span class="p">(</span><span class="s">&#34;message&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Student</span><span class="w"> </span><span class="n">student</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Student</span><span class="p">(</span><span class="s">&#34;shane&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">22</span><span class="p">,</span><span class="w"> </span><span class="n">169</span><span class="p">,</span><span class="w"> </span><span class="n">120</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">method</span><span class="p">.</span><span class="na">invoke</span><span class="p">(</span><span class="n">student</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -3602,8 +3611,7 @@
   }
 })();
 </script>
-<p>取消注释 <code>/etc/pacman.d/mirrorlist</code> 中的内容。</p>
-<p>安装基础组件。我目前的电脑是 AMD GPU，因此我需要安装 <code>amd-ucode</code>。如果你是 Intel 的 CPU，你应该安装 <code>intel-ucode</code>：</p>
+<p>如果要调用类的静态方法，则直接传入 <code>null</code>。</p>
 <div
   class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
   
@@ -3620,7 +3628,7 @@
 </svg>
       </div>
       <span class="text-muted-foreground text-sm font-medium">
-        SHELL
+        JAVA
       </span>
     </div>
 
@@ -3669,7 +3677,8 @@
 
   
   <div class="code-block-content relative" id="code-8">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacstrap -K /mnt base base-devel linux linux-firmware amd-ucode vi neovim fish grub efibootmgr networkmanager sddm cliphist brightnessctl pipewire pipewire-audio pipewire-pulse pipewire-jack pipewire-alsa bluez bluez-utils blueman pavucontrol</span></span></code></pre></div>
+    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Method</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">cls</span><span class="p">.</span><span class="na">getDeclaredMethod</span><span class="p">(</span><span class="s">&#34;staticMethod&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">method</span><span class="p">.</span><span class="na">invoke</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span></span></span></code></pre></div>
     
     <div
       class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
@@ -3902,3645 +3911,11 @@
   }
 })();
 </script>
-<h2 id="初始化配置系统">初始化配置系统</h2>
-<p>创建 <code>fatab</code> 文件。</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-9"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-9"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-9">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">genfstab -U /mnt &gt; /mnt/etc/fstab
-</span></span><span class="line"><span class="cl">cat /mnt/etc/fstab  <span class="c1"># 用于检查</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-9';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>从 live 环境进入系统：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-10"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-10"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-10">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">arch-chroot /mnt</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-10';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>时区和本地化设置：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-11"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-11"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-11">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-</span></span><span class="line"><span class="cl">hwclock --systohc</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-11';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>编辑<code>/etc/locale.gen</code>，取消注释 <code>en_US.UTF-8 UTF-8</code>：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-12"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-12"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-12">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">loclae-gen</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-12';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>创建 <code>/etc/locale.conf</code> 并添加：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-13"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-13"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-13">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-13';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>在 <code>/etc/hostname</code> 中添加 hostname。</p>
-<h2 id="grub-配置">GRUB 配置</h2>
-<p>在基础组件安装时我们已经安装了 <code>grub</code> 和 <code>efibootmgr</code>，现在需要配置 GRUB：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-14"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-14"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-14">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">grub-install --target<span class="o">=</span>x86_64-efi --efi-directory<span class="o">=</span>/boot --bootloader-id<span class="o">=</span>GRUB
-</span></span><span class="line"><span class="cl">grub-mkconfig -o /boot/grub/grub.cfg</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-14';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>设置 root 密码：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-15"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-15"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-15">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">passwd</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-15';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>重启系统并以 root 身份登陆。编辑 <code>/etc/pacman.conf</code> 然后取消注释 <code>[multilib]</code> 的部分，并在文件末尾添加：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-16"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-16"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-16">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="o">[</span>archlinuxcn<span class="o">]</span>
-</span></span><span class="line"><span class="cl"><span class="nv">Server</span> <span class="o">=</span> https://mirrors.ustc.edu.cn/archlinuxcn/<span class="nv">$arch</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-16';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>安装 yay：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-17"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-17"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-17">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S archlinuxcn-keyring
-</span></span><span class="line"><span class="cl">pacman -S yay</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-17';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>启动一些基础服务：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-18"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-18"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-18">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">systemctl <span class="nb">enable</span> --now NetworkManager
-</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> --now sddm.service
-</span></span><span class="line"><span class="cl">systemctl <span class="nb">enable</span> --now bluetooth.service</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-18';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>安装显卡驱动：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-19"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-19"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-19">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon</span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-19';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<p>添加一个普通用户：</p>
-<div
-  class="code-block-container border-border bg-card my-6 overflow-hidden rounded-xl border shadow-sm transition-all duration-200 ease-out hover:-translate-y-0.5 hover:shadow-md">
-  
-  <div
-    class="code-block-header bg-muted/30 border-border flex items-center justify-between border-b px-4 py-3">
-    
-    <div class="flex items-center gap-2">
-      <div class="text-muted-foreground flex-shrink-0">
-        
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-</svg>
-      </div>
-      <span class="text-muted-foreground text-sm font-medium">
-        SHELL
-      </span>
-    </div>
-
-    
-    <div class="flex items-center gap-2">
-      <button
-          class="collapse-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-          data-code-id="code-20"
-          data-default-state="expanded"
-          data-collapsed="false"
-          data-auto-collapse-lines="30"
-          data-auto-collapse-height="400"
-          data-collapsed-height="120"
-          title="折叠"
-          aria-label="折叠">
-          <span class="collapse-icon">
-            
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path fill="currentColor" d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z"/></svg>
-          </span>
-          <span class="collapse-text hidden sm:inline"
-            >折叠</span
-          >
-        </button>
-      <button
-        class="copy-code-btn text-muted-foreground hover:text-primary hover:bg-primary/10 focus:ring-primary/20 flex items-center gap-1.5 rounded-md px-2 py-1 text-xs font-medium transition-all duration-200 ease-out focus:ring-2 focus:outline-none"
-        data-code-id="code-20"
-        title="复制"
-        aria-label="复制">
-        <span class="copy-icon">
-          
-  <svg class="h-3 w-3"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
-</svg>
-        </span>
-        <span class="copy-text hidden sm:inline"
-          >复制</span
-        >
-      </button>
-    </div>
-  </div>
-
-  
-  <div class="code-block-content relative" id="code-20">
-    <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">useradd -G wheel -m shane
-</span></span><span class="line"><span class="cl">passwd shane
-</span></span><span class="line"><span class="cl">visudo  <span class="c1"># 取消注释 #%wheel ALL=(ALL:ALL) ALL</span>
-</span></span><span class="line"><span class="cl">su - shane  <span class="c1"># 切换到普通用户</span></span></span></code></pre></div>
-    
-    <div
-      class="collapse-overlay to-card/90 pointer-events-none absolute inset-0 bg-gradient-to-b from-transparent via-transparent opacity-0 transition-opacity duration-300">
-      <div
-        class="text-muted-foreground bg-card/80 border-border/50 hover:bg-primary/10 hover:text-primary hover:border-primary/30 absolute bottom-4 left-1/2 -translate-x-1/2 cursor-pointer rounded-full border px-3 py-1.5 text-xs backdrop-blur-sm transition-all duration-200">
-        点击展开查看更多
-      </div>
-    </div>
-  </div>
-</div>
-
-
-<script>
-(function() {
-  const codeId = 'code-20';
-  const copyBtn = document.querySelector('.copy-code-btn[data-code-id="' + codeId + '"]');
-  const collapseBtn = document.querySelector('.collapse-code-btn[data-code-id="' + codeId + '"]');
-  const codeContainer = document.getElementById(codeId);
-
-  if (!codeContainer) return;
-
-  
-  if (copyBtn) {
-    const copyIcon = copyBtn.querySelector('.copy-icon');
-    const copyText = copyBtn.querySelector('.copy-text');
-
-    copyBtn.addEventListener('click', async function() {
-      try {
-        
-        let codeText = '';
-
-        
-        const codeTableCell = codeContainer.querySelector('.lntd:last-child code');
-        if (codeTableCell) {
-          codeText = codeTableCell.textContent || codeTableCell.innerText;
-        } else {
-          
-          const codeElement = codeContainer.querySelector('code');
-          if (codeElement) {
-            
-            const hasInlineLineNumbers = codeElement.querySelector('.ln');
-            if (hasInlineLineNumbers) {
-              
-              const codeLines = codeElement.querySelectorAll('.cl');
-              if (codeLines.length > 0) {
-                codeText = Array.from(codeLines)
-                  .map(line => {
-                    const text = line.textContent || line.innerText;
-                    
-                    return text.replace(/\n+$/, '');
-                  })
-                  .join('\n')
-                  .replace(/\n+$/, ''); 
-              } else {
-                
-                const allText = codeElement.textContent || codeElement.innerText;
-                codeText = allText.replace(/^\d+/gm, '').replace(/^\s+/gm, '');
-              }
-            } else {
-              
-              codeText = codeElement.textContent || codeElement.innerText;
-            }
-          } else {
-            
-            codeText = codeContainer.textContent || codeContainer.innerText;
-          }
-        }
-
-        
-        codeText = codeText.trim();
-
-        
-        await navigator.clipboard.writeText(codeText);
-
-        
-        copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M5 13l4 4L19 7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (copyText) {
-          copyText.textContent = '已复制';
-        }
-        copyBtn.classList.add('text-green-600');
-
-        
-        setTimeout(() => {
-          copyIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z\u0022 \/\u003e\n\u003c\/svg\u003e`;
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          copyBtn.classList.remove('text-green-600');
-        }, 2000);
-
-      } catch (err) {
-        console.error('复制失败:', err);
-
-        
-        const range = document.createRange();
-        const codeElement = codeContainer.querySelector('code') || codeContainer;
-        range.selectNodeContents(codeElement);
-        const selection = window.getSelection();
-        selection.removeAllRanges();
-        selection.addRange(range);
-
-        
-        if (copyText) {
-          copyText.textContent = '已选择';
-        }
-
-        setTimeout(() => {
-          if (copyText) {
-            copyText.textContent = '复制';
-          }
-          selection.removeAllRanges();
-        }, 2000);
-      }
-    });
-  }
-
-  
-  if (collapseBtn) {
-    const collapseIcon = collapseBtn.querySelector('.collapse-icon');
-    const collapseText = collapseBtn.querySelector('.collapse-text');
-    const collapseOverlay = codeContainer.querySelector('.collapse-overlay');
-
-    
-    let codeElement = codeContainer.querySelector('pre.chroma');
-    if (!codeElement) {
-      codeElement = codeContainer.querySelector('pre');
-    }
-
-    const defaultState = collapseBtn.dataset.defaultState || 'expanded';
-    const isCollapsedAttr = collapseBtn.dataset.collapsed === 'true';
-    const autoCollapseLines = parseInt(collapseBtn.dataset.autoCollapseLines) || 30;
-    const autoCollapseHeight = parseInt(collapseBtn.dataset.autoCollapseHeight) || 400;
-    const collapsedHeight = parseInt(collapseBtn.dataset.collapsedHeight) || 120;
-
-    let isCollapsed = false;
-
-    
-    function initCollapse() {
-      
-      const shouldCollapse = isCollapsedAttr ||
-                           defaultState === 'collapsed' ||
-                           shouldAutoCollapse();
-
-      if (shouldCollapse) {
-        setCollapsed(true, false); 
-      }
-    }
-
-    function shouldAutoCollapse() {
-      
-      if (codeElement) {
-        const lines = codeElement.querySelectorAll('.line, .cl');
-        const height = codeElement.offsetHeight;
-        return lines.length > autoCollapseLines || height > autoCollapseHeight;
-      }
-
-      
-      const containerHeight = codeContainer.offsetHeight;
-      if (containerHeight > autoCollapseHeight) {
-        return true;
-      }
-
-      
-      const textContent = codeContainer.textContent || codeContainer.innerText || '';
-      const estimatedLines = textContent.split('\n').length;
-      return estimatedLines > autoCollapseLines;
-    }
-
-    function setCollapsed(collapsed, animate = true) {
-      if (!collapseOverlay) return;
-
-      isCollapsed = collapsed;
-
-      if (collapsed) {
-        
-        codeContainer.style.maxHeight = collapsedHeight + 'px';
-        codeContainer.style.overflow = 'hidden';
-        collapseOverlay.style.opacity = '1';
-        collapseOverlay.style.pointerEvents = 'auto';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath stroke-linecap=\u0022round\u0022 stroke-linejoin=\u0022round\u0022 stroke-width=\u00222\u0022 d=\u0022M19 9l-7 7-7-7\u0022 \/\u003e\n\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '展开';
-        }
-        collapseBtn.title = '展开';
-
-      } else {
-        
-        codeContainer.style.maxHeight = '';
-        codeContainer.style.overflow = '';
-        collapseOverlay.style.opacity = '0';
-        collapseOverlay.style.pointerEvents = 'none';
-
-        
-        collapseIcon.innerHTML = `\n  \u003csvg class=\u0022h-3 w-3\u0022\n    fill=\u0022none\u0022\n    stroke=\u0022currentColor\u0022\n    viewBox=\u00220 0 24 24\u0022\u003e\u003cpath fill=\u0022currentColor\u0022 d=\u0022M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6l-6 6z\u0022\/\u003e\u003c\/svg\u003e`;
-        if (collapseText) {
-          collapseText.textContent = '折叠';
-        }
-        collapseBtn.title = '折叠';
-      }
-
-      
-      if (animate) {
-        codeContainer.style.transition = 'max-height 0.3s ease-out';
-        setTimeout(() => {
-          codeContainer.style.transition = '';
-        }, 300);
-      }
-    }
-
-    function toggleCollapse() {
-      setCollapsed(!isCollapsed, true);
-    }
-
-    
-    collapseBtn.addEventListener('click', toggleCollapse);
-
-    
-    if (collapseOverlay) {
-      collapseOverlay.addEventListener('click', () => {
-        if (isCollapsed) {
-          setCollapsed(false, true);
-        }
-      });
-    }
-
-    
-    initCollapse();
-  }
-})();
-</script>
-<h2 id="后续">后续</h2>
-<p>至此，我们已经成功从零安装了一个最小最简洁的 Arch Linux，后续可以根据喜好和需求选择安装窗口管理器还是桌面环境。</p>
-
-  <blockquote
-    class="border-primary bg-muted/30 hover:bg-muted/40 my-6 rounded-r-lg border-l-4 py-4 pr-4 pl-6 italic transition-all duration-200 ease-out hover:translate-x-1">
-    <div class="prose prose-sm max-w-none">
-      <p>2025 年 8 月 15 日追记 <br>
-对我来说，自从接触了窗口管理器便难以离开它，我怀念全键盘操作的快乐以及配置工具的满足感。时隔三个月没有使用 Linux 和窗口管理器了，我准备重拾它们。敬请期待后续关于 Linux 的文章，我们一起探索 Linux 世界的乐趣！！</p>
-    </div>
-  </blockquote><script>
-function toggleAlert(alertId) {
-  const content = document.getElementById(alertId + '-content');
-  const chevron = document.getElementById(alertId + '-chevron');
-  const header = content.previousElementSibling;
-  
-  if (content.classList.contains('hidden')) {
-    content.classList.remove('hidden');
-    chevron.style.transform = 'rotate(0deg)';
-    header.setAttribute('aria-expanded', 'true');
-  } else {
-    content.classList.add('hidden');
-    chevron.style.transform = 'rotate(-90deg)';
-    header.setAttribute('aria-expanded', 'false');
-  }
-}
-
-
-document.addEventListener('DOMContentLoaded', function() {
-  const collapsedAlerts = document.querySelectorAll('.alert-content.hidden');
-  collapsedAlerts.forEach(function(content) {
-    const alertId = content.id.replace('-content', '');
-    const chevron = document.getElementById(alertId + '-chevron');
-    if (chevron) {
-      chevron.style.transform = 'rotate(-90deg)';
-    }
-  });
-});
-</script>
+<h2 id="反射的优缺点">反射的优缺点</h2>
+<h3 id="优点">优点</h3>
+<p>自由灵活，不受类的访问权限限制。</p>
+<h3 id="缺点">缺点</h3>
+<p>安全性低，性能较低，破坏 Java 类的封装性。</p>
   </article>
 
   
@@ -7593,9 +3968,9 @@ document.addEventListener('DOMContentLoaded', function() {
           <p>
             <strong>链接:</strong>
             <a
-              href="http://localhost:1313/posts/arch-linux-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/"
+              href="http://localhost:1313/posts/java-%E5%8F%8D%E5%B0%84/"
               class="text-primary hover:text-primary/80 transition-colors break-all hyphens-auto duration-200">
-              http://localhost:1313/posts/arch-linux-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97/
+              http://localhost:1313/posts/java-%E5%8F%8D%E5%B0%84/
             </a>
           </p>
 
@@ -7640,64 +4015,64 @@ document.addEventListener('DOMContentLoaded', function() {
       
       <div class="nav-item">
         
-          <div
-            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6">
-            <div class="mb-3 flex items-center gap-3">
-              
+          <a
+            href="/posts/jvm-%E8%99%9A%E6%8B%9F%E6%9C%BA/"
+            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
+            <div>
+              <div class="mb-3 flex items-center gap-3">
+                
   <svg class="h-4 w-4"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
 </svg>
-              <span class="text-muted-foreground/50 text-sm font-medium">
-                没有上一篇
-              </span>
-            </div>
-            <p class="text-muted-foreground/50 text-sm">
-              这是最早的文章
-            </p>
-          </div>
-        
-      </div>
-
-      
-      <div class="nav-item">
-        
-          <a
-            href="/posts/jvm-%E8%99%9A%E6%8B%9F%E6%9C%BA/"
-            class="group bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex min-h-[140px] flex-col justify-between rounded-xl border p-6 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none">
-            <div>
-              <div class="mb-3 flex items-center justify-end gap-3">
                 <span class="text-muted-foreground text-sm font-medium">
-                  下一篇
+                  上一篇
                 </span>
-                
-  <svg class="h-4 w-4"
-    fill="none"
-    stroke="currentColor"
-    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-</svg>
               </div>
 
               <h3
-                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-right text-lg leading-tight font-semibold transition-colors duration-200">
+                class="text-foreground group-hover:text-primary mb-3 line-clamp-2 text-lg leading-tight font-semibold transition-colors duration-200">
                 JVM 虚拟机
               </h3>
             </div>
 
             <div
-              class="text-muted-foreground mt-auto flex items-center justify-end gap-2 text-xs">
-              <time datetime="2025-08-30">
-                08 月 30 日
-              </time>
+              class="text-muted-foreground mt-auto flex items-center gap-2 text-xs">
               
   <svg class="h-3 w-3"
     fill="none"
     stroke="currentColor"
     viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
 </svg>
+              <time datetime="2025-08-30">
+                08 月 30 日
+              </time>
             </div>
           </a>
+        
+      </div>
+
+      
+      <div class="nav-item">
+        
+          <div
+            class="bg-muted/30 border-border/50 flex min-h-[140px] flex-col justify-center rounded-xl border p-6">
+            <div class="mb-3 flex items-center justify-end gap-3">
+              <span class="text-muted-foreground/50 text-sm font-medium">
+                没有下一篇
+              </span>
+              
+  <svg class="h-4 w-4"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+</svg>
+            </div>
+            <p class="text-muted-foreground/50 text-right text-sm">
+              这是最新的文章
+            </p>
+          </div>
         
       </div>
     </div>
@@ -7714,6 +4089,36 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
+  <section class="related-posts mb-12">
+    
+    <div class="mb-6 flex items-center gap-3">
+      
+  <svg class="h-5 w-5"
+    fill="none"
+    stroke="currentColor"
+    viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+</svg>
+      <h2 class="text-foreground text-2xl font-bold">
+        相关文章
+      </h2>
+    </div>
+
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
+      
+        <article class="group">
+          <a href="/posts/jvm-%E8%99%9A%E6%8B%9F%E6%9C%BA/" class="block">
+            <div class="bg-card border-border hover:bg-primary/5 hover:border-primary/20 focus:ring-primary/20 flex items-center rounded-xl border p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-lg focus:ring-2 focus:outline-none min-h-[120px]">
+              <h3 class="text-foreground group-hover:text-primary text-lg font-semibold leading-snug line-clamp-3 w-full">
+                JVM 虚拟机
+              </h3>
+            </div>
+          </a>
+        </article>
+      
+    </div>
+  </section>
 
 
 
@@ -8188,13 +4593,25 @@ document.addEventListener('DOMContentLoaded', function() {
           <div id="toc-content">
             <nav id="TableOfContents">
   <ul>
-    <li><a href="#安装媒介">安装媒介</a></li>
-    <li><a href="#网络和时区">网络和时区</a></li>
-    <li><a href="#分区">分区</a></li>
-    <li><a href="#安装系统">安装系统</a></li>
-    <li><a href="#初始化配置系统">初始化配置系统</a></li>
-    <li><a href="#grub-配置">GRUB 配置</a></li>
-    <li><a href="#后续">后续</a></li>
+    <li><a href="#反射的使用场景">反射的使用场景</a></li>
+    <li><a href="#类加载机制">类加载机制</a></li>
+    <li><a href="#操作反射的-java-类">操作反射的 Java 类</a>
+      <ul>
+        <li><a href="#获取-class-对象的方法">获取 Class 对象的方法</a></li>
+        <li><a href="#获取-class-对象的成员变量">获取 Class 对象的成员变量</a></li>
+        <li><a href="#获取-class-对象中的方法">获取 Class 对象中的方法</a>
+          <ul>
+            <li><a href="#调用方法">调用方法</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#反射的优缺点">反射的优缺点</a>
+      <ul>
+        <li><a href="#优点">优点</a></li>
+        <li><a href="#缺点">缺点</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
           </div>
